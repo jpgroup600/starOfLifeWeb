@@ -226,6 +226,9 @@
     position: absolute;
     bottom: -30%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     object-fit: contain;
     z-index: 5;
     width: 750px;
@@ -233,6 +236,18 @@
     @include lg {
       right: -100%;
       width: 100%;
+    }
+    &_info_box {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: center;
+    }
+
+    &_info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
   }
   h3 {

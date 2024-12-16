@@ -8,6 +8,7 @@ import Work from "@/components/Work/Work";
 import Hero from "@/components/Hero/Hero";
 import Head from "next/head";
 import KoreanArchive from "@/components/Archive/KoreanArchive";
+import Archive from "@/components/Archive/Archive";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Showreel />
       <Work />
       <KoreanArchive />
+      <Archive />
       <Client />
       <Services />
       <About />

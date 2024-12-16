@@ -3,32 +3,37 @@ type Data = {
   desc: string;
   color: string;
   deg: number;
+  info?: string[];
 };
 
 export const data: Data[] = [
   {
-    heading: "Brand Design",
+    heading: "Marketing",
     desc: "Unleash the power of visual storytelling with my Brand Design expertise. I create unique and memorable visual identities that resonate with your audience, making your brand stand out in today’s competitive landscape.",
     color: "#dbedf2",
     deg: 62,
+    info: ["검색광고", "배너광고", "SNS 광고", "유튜브 광고", "브랜딩"],
   },
   {
-    heading: "Brand Strategy",
+    heading: "Web & App",
     desc: "Ignite success with my Brand Strategy service. I navigate the complexities of the market, sculpting a roadmap that defines, differentiates, and propels your brand forward. ",
     color: "#daf2e0",
     deg: 25,
+    info: ["맞춤형 프로그램 개발","자사몰 구축","앱 기획 & 개발", "관리 프로그램","브랜딩 페이지"]
   },
   {
-    heading: "UX/UI Webdesign",
+    heading: "Design & Video",
     desc: "Immerse users in a seamless digital experience with my UX/UI Web Design. I blend functionality with aesthetics, creating interfaces that captivate and navigate effortlessly. ",
     color: "#fff4ce",
     deg: 342,
+    info : ["제품 촬영", "상세페이지 제작", "영상 제작","배너 제작"]
   },
   {
-    heading: "Web & App Development",
+    heading: "Operation",
     desc: "Elevate your online presence with my expert Web Development services, offered in collaboration with professionals from my extensive network. We specialize in crafting responsive, robust, and dynamic websites that effectively engage users by utilizing cutting-edge development solutions such as Wordpress, Typo3, Squarespace, Webflow, or custom code integrating libraries like Gsap, Next.js, or Locomotive Scroll. ",
     color: "#fcebe4",
     deg: 292,
+    info: ["상품관리", "자사몰", "오픈마켓", "소셜커머스","검색광고", "종합몰 & 폐쇄몰"]
   },
   // {
   //   heading: "ERP-Systeme",

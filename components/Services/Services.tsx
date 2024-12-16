@@ -83,7 +83,7 @@ const Services = () => {
         <ServicesHeading />
       </div>
       <div className={`slider ${s.slider}`}>
-        {data.map(({ heading }, i) => {
+        {data.map(({ heading, info }, i) => {
           return (
             <div
               key={i}
@@ -92,13 +92,30 @@ const Services = () => {
             >
               <Shape id={i} />
               <h3>{heading}</h3>
-              <Image
+              <div className={`slide-img-${i} ${s.slide_img}`}
+              style={{
+                border:1 ,
+                borderColor:"black",
+                borderStyle:"solid"
+              }}
+              >
+                <div className={s.slide_img_info_box}>
+                {info?.map((e, i) => {
+                  return <div key={i} className={s.slide_img_info}>
+                    <p>{e}</p>
+                      
+                    </div>
+                })}
+                </div>
+              </div>
+              {/* <Image
                 className={`slide-img-${i} ${s.slide_img}`}
                 src={`/services/${i}.png`}
                 alt="slide-img"
                 width={1920}
                 height={1080}
-              />
+              /> */}
+              
             </div>
           );
         })}
