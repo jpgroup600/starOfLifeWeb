@@ -1,0 +1,128 @@
+@import "../../styles/breakpoint";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  padding-inline: 20px;
+  height: 100vh;
+  margin-top: 40px;
+  @include lg {
+    margin-top: 0;
+    height: 100vh;
+    padding-inline: 0px;
+  }
+  h3 {
+    font-size: 1.5rem;
+    line-height: calc(1.5rem * 1.5);
+    font-weight: 400;
+    margin-inline: auto;
+
+    @include lg {
+      font-size: 3.25rem;
+      line-height: 4.0625rem;
+    }
+    @include xxl {
+      font-size: 4.0625rem;
+      line-height: 4.875rem;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  h2 {
+    font-size: 2rem;
+    line-height: calc(2rem * 1.5);
+    font-weight: 700;
+    text-align: center;
+    br {
+      display: none;
+    }
+    @include lg {
+      text-align: left;
+      margin-inline: auto;
+      width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      min-width: 1260px;
+      font-size: 4.28vw;
+      line-height: calc(4.28vw * 1.5);
+      br {
+        display: block;
+      }
+    }
+  }
+  p {
+    font-size: 1.2rem;
+    line-height: calc(1.2rem * 1.5);
+    max-width: 550px;
+    text-align: center;
+    @include lg {
+      text-align: left;
+      font-size: 2rem;
+      line-height: calc(2rem * 1.5);
+    }
+  }
+  &_cursor {
+    animation: Typewriter-cursor 1s infinite;
+    &[data-hide] {
+      animation: none;
+      opacity: 0;
+    }
+  }
+  &_cover {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    span {
+      transform-style: preserve-3d;
+    }
+  }
+}
+
+@keyframes Typewriter-cursor {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.arrow {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 50px;
+  height: 60px;
+  width: 60px;
+  z-index: 2;
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  &::before {
+    content: "Scroll down";
+  }
+  @include lg {
+    transform: none;
+    left: 12%;
+    bottom: 25px;
+  }
+}

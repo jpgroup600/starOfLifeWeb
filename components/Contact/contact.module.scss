@@ -1,0 +1,209 @@
+@import "../../styles/breakpoint";
+
+.main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 100px;
+  @include lg {
+    margin-top: 140px;
+    min-height: 100vh;
+  }
+  h1 {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    font-weight: 400;
+    margin-inline: auto;
+    max-width: 1260px;
+    font-size: 4rem;
+    line-height: calc(4rem * 1.2);
+    cursor: default;
+    text-transform: uppercase;
+    span {
+      display: inline-block;
+      transform-origin: bottom;
+    }
+    @include lg {
+      font-size: 15.625rem;
+      line-height: calc(15.625rem / 2);
+      margin-top: calc(15.625rem / 2);
+      margin-bottom: calc(15.625rem / 2);
+    }
+    @include xxl {
+      margin-top: 10.937rem;
+      margin-bottom: 10.937rem;
+      max-width: 1560px;
+      font-size: 21.875rem;
+      line-height: 10.937rem;
+    }
+  }
+}
+
+.heading {
+  margin-inline: auto;
+  position: relative;
+  z-index: 4;
+  @include lg {
+    margin-bottom: 100px;
+  }
+  svg {
+    width: 70vw;
+    path {
+      fill: transparent;
+      stroke-dasharray: 1290px;
+      stroke: black;
+    }
+  }
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  gap: 24px;
+  padding-inline: 20px;
+  @include lg {
+    padding-inline: 40px;
+    margin-top: 250px;
+  }
+
+  h4 {
+    font-weight: 700;
+    position: relative;
+    font-size: 1.5rem;
+    line-height: calc(1.5rem * 1.5);
+    @include lg {
+      font-size: 4rem;
+      line-height: calc(4rem * 1.2);
+    }
+    @include xxl {
+      font-size: 4vw;
+      line-height: calc(4vw * 1.2);
+    }
+  }
+  p {
+    font-weight: 400;
+    position: relative;
+    font-size: 1.5rem;
+    line-height: calc(1.5rem * 1.5);
+    @include lg {
+      font-size: 2rem;
+      line-height: calc(2rem * 1.2);
+    }
+    @include xxl {
+      font-size: 2vw;
+      line-height: calc(2vw * 1.2);
+    }
+  }
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 33px;
+  @include lg {
+    flex-direction: row;
+    gap: 90px;
+  }
+}
+
+.pathOne {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translateY(-40%);
+  z-index: -1;
+  svg {
+    width: 9vw;
+    height: 7vw;
+  }
+}
+.pathTwo {
+  position: absolute;
+  right: -10%;
+  top: -150px;
+  z-index: -1;
+  @include lg {
+    top: 0px;
+  }
+  svg {
+    width: 45vw;
+    height: 24vw;
+  }
+}
+.pathThree {
+  position: absolute;
+  top: 200px;
+  right: -27%;
+  svg {
+    width: 42vw;
+    height: 36vw;
+  }
+}
+
+.tag {
+  position: absolute;
+  z-index: 2;
+  transform: translateY(-50%) rotate(270deg);
+  top: 50%;
+  left: -50px;
+  font-size: 2.5rem;
+  line-height: calc(2.5rem * 1.2);
+  margin-top: 350px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 90%;
+  margin-top: 60px;
+  margin-inline: auto;
+  @include lg {
+    width: 70%;
+  }
+
+  button {
+    height: 68px;
+    color: white;
+    background-color: var(--primary-text);
+    border: 2px solid var(--primary-text);
+    font-size: 2rem;
+    line-height: calc(2rem * 1.4);
+    width: fit-content;
+    padding-inline: 60px;
+    margin-inline: auto;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    @include lg {
+      flex-direction: row;
+    }
+    input {
+      padding: 10px 20px;
+      width: 100%;
+      min-height: 45px;
+      background-color: rgba(255, 255, 255, 0.6);
+      border: 2px solid var(--primary-text);
+      font-size: 2rem;
+      line-height: calc(2rem * 1.4);
+      @include lg {
+        width: 50%;
+      }
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.6);
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
