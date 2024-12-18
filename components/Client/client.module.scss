@@ -99,19 +99,23 @@
   }
   &_para {
     position: relative;
+    font-family: Shilla;
     padding-inline: 20px;
+    z-index: 1;
+    
     @include lg {
       padding-inline: 40px;
     }
     p {
-      font-size: 1.5rem;
+      font-size: 2rem;
       line-height: calc(1.5rem * 1.5);
       font-weight: 700;
       text-align: center;
       margin-top: 40px;
+      
       @include lg {
         margin-top: 0px;
-        font-size: 5rem;
+        font-size: 4rem;
         line-height: calc(5rem * 1.2);
         span {
           font-size: 2.4rem;
@@ -138,7 +142,9 @@
       @include lg {
         padding-inline: 40px;
       }
+
     }
+    
   }
 }
 

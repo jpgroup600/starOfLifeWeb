@@ -8,6 +8,7 @@ import Image from "next/image";
 import { useSnapshot } from "valtio";
 import { store } from "@/store";
 import Shape from "./Shape";
+import Link from "next/link";
 
 const Work = () => {
   const container = useRef<HTMLElement>(null);
@@ -114,8 +115,9 @@ const Work = () => {
           </h2>
         </div>
 
-        {data.map(({ name }, i) => {
+        {data.map(({ name,link }, i) => {
           return (
+            <Link href={link? link : "#"}>
             <div key={i} className={`slide-${i} ${s.slide}`}>
               <Shape id={i} />
               <Image
@@ -137,12 +139,18 @@ const Work = () => {
                 onPointerEnter={workHeadingPointerEnter}
                 onPointerLeave={workHeadingPointerLeave}
               >
-                <h2 className={`heading-${i}`}>{name}</h2>
-                <h2 className={`heading-${i}`} data-stroke>
-                  {name}
+                <h2
+                  className={`heading-${i}`}
+                  dangerouslySetInnerHTML={{ __html: name }}
+                ></h2>
+                <h2 className={`heading-${i}`} data-stroke
+                dangerouslySetInnerHTML={{__html:name}}
+                >
+                  
                 </h2>
               </div>
             </div>
+            </Link>
           );
         })}
       </div>

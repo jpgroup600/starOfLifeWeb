@@ -79,17 +79,22 @@ const Contact = () => {
         </h4>
         <p>이제 사업 구축은 저희에게 맡기고 성장 전략에 집중하세요!</p>
       </div>
-      <form className={s.form}>
-        <div>
-          <input className="input" type="text" placeholder="Company Name" />
-          <input className="input" type="text" placeholder="Company Status" />
+      <div className={s.form}
+        style={{ border: "1px solid red" }}
+      >
+        <div className={s.box}>
+          <div className={s.box_input}>
+            <input className="input" type="text" placeholder="Company Name" />
+            <input className="input" type="text" placeholder="Company Status" />
+          
+          
+            <input className="input" type="email" placeholder="Email" />
+            <input className="input" type="text" placeholder="Phone" />
+            <button className="submit">Submit</button>
+          </div>
+          
         </div>
-        <div>
-          <input className="input" type="email" placeholder="Email" />
-          <input className="input" type="text" placeholder="Phone" />
-        </div>
-        <button className="submit">Submit</button>
-      </form>
+      </div>
     </section>
   );
 };

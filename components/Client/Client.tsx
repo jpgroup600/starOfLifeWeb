@@ -147,7 +147,7 @@ const Client = () => {
         <ClientsHeading />
       </div>
       <div className={s.grid}>
-        <div className={`client-grid ${s.grid_logos}`}>
+        {/* <div className={`client-grid ${s.grid_logos}`}>
           <Marquee>
             {[...Array(38)].map((e, i) => {
               return (
@@ -176,17 +176,19 @@ const Client = () => {
               );
             })}
           </Marquee>
-        </div>
+        </div> */}
         <div className={`client-grid-para ${s.grid_para}`}>
           <p ref={para}>
             마케팅, 개발, 운영 이 모든걸 더이상 따로따로 관리 받지 않으셔도
             됩니다 <br />{" "}
-            <span>시간과 효율 두마리 토끼를 동시에 잡은 최고의 솔루션</span>
+            <br />
+            <span className={s.grid_para_space}>시간과 효율 두마리 토끼를 동시에 잡은 최고의 솔루션</span>
           </p>
           <p ref={paraHide} className={s.grid_para_hide}>
             마케팅, 개발, 운영 이 모든걸 더이상 따로따로 관리 받지 않으셔도
             됩니다 <br />{" "}
-            <span>시간과 효율 두마리 토끼를 동시에 잡은 최고의 솔루션</span>
+            <br />
+            <span className={s.grid_space}>시간과 효율 두마리 토끼를 동시에 잡은 최고의 솔루션</span>
           </p>
         </div>
       </div>

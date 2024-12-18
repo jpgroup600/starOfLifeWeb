@@ -23,7 +23,7 @@ const Services = () => {
             .timeline({
               scrollTrigger: {
                 trigger: container.current!,
-                start: "top 40%",
+                start: "top 100%",
                 toggleActions: "play none none reverse",
                 fastScrollEnd: isDesktop,
                 preventOverlaps: isDesktop,
@@ -34,11 +34,11 @@ const Services = () => {
             })
             .from(".services-heading path", {
               strokeDashoffset: 1500,
-              duration: 0.8,
-              ease: "none",
+              duration: 12,
+              ease: "power3",
             })
             .to(".services-heading path", {
-              duration: 0.8,
+              duration: 12,
               fill: "black",
               ease: "power3",
             });
@@ -69,8 +69,8 @@ const Services = () => {
           )
           .to(
             `.slide-img-${i}`,
-            { right: "100%", duration: 4, ease: "none" },
-            "<1"
+            { right: "100%", duration: 8, ease: "none" },
+            "<"
           );
       });
     },
@@ -93,11 +93,6 @@ const Services = () => {
               <Shape id={i} />
               <h3>{heading}</h3>
               <div className={`slide-img-${i} ${s.slide_img}`}
-              style={{
-                border:1 ,
-                borderColor:"black",
-                borderStyle:"solid"
-              }}
               >
                 <div className={s.slide_img_info_box}>
                 {info?.map((e, i) => {

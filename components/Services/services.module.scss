@@ -231,23 +231,28 @@
     justify-content: center;
     object-fit: contain;
     z-index: 5;
-    width: 750px;
-    right: -800px;
+    width: 1500px;
+    right: -3000px;
     @include lg {
-      right: -100%;
-      width: 100%;
+      right: -300%;
+      // width: 100%;
     }
     &_info_box {
       display: flex;
       flex-direction: row;
       gap: 20px;
       align-items: center;
+      justify-content: space-between;
     }
 
     &_info {
       display: flex;
       flex-direction: column;
       gap: 10px;
+      font-family: Shilla;
+      font-size: 2.5rem;
+      
+      
     }
   }
   h3 {

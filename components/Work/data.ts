@@ -2,11 +2,13 @@ type Data = {
   name: string;
   desc: string[];
   color: string;
+  link?:string;
 };
 
 export const data: Data[] = [
   {
-    name: "Bauhaus Tapete",
+    name: "당신의 <br> 아이디어를",
+    link:"test.html",
     desc: [
       "design product",
       "Direction artistique",
@@ -19,7 +21,7 @@ export const data: Data[] = [
     color: "#dbedf2",
   },
   {
-    name: "Thyssen-Bornemisz",
+    name: "빠르게",
     desc: [
       "Identité de marque",
       "Direction artistique",
@@ -30,12 +32,12 @@ export const data: Data[] = [
     color: "#fcebe4",
   },
   {
-    name: "WWTF",
+    name: "많은 사람들에게",
     desc: ["Direction artistique", "Identité de marque", "print / digital"],
     color: "#fff4ce",
   },
   {
-    name: "Kim Layani",
+    name: "<span class=small-stroke>효과적으로 <br> 연결하는 제안을 드립니다</span>",
     desc: [
       "Contenu Editorial",
       "Direction de production",

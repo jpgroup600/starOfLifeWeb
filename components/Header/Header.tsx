@@ -255,9 +255,9 @@ const Header = ({
         {[...Array(20)].map((e, i) => {
           return (
             <div key={i}>
-              <h1 className="large-text-1">Phlippe Layani Phlippe Layani</h1>
+              <h1 className="large-text-1">Wise Rootree Wise Rootree</h1>
               <h1 className="large-text-2">
-                Digital Designer Digital Designer
+                All in one Agency grow your business
               </h1>
             </div>
           );
