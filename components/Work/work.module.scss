@@ -221,7 +221,7 @@
       width: 100%;
       color: transparent;
       z-index: 3;
-      -webkit-text-stroke: 1px black;
+      -webkit-text-stroke: 1px white;
     }
   }
 
@@ -283,15 +283,32 @@
   top: -54%;
   left: -35%;
   width: 62vw;
-  height: 85vw;
+  height: 100vw;
+  border-radius: 5px;
   z-index: 2;
   object-fit: cover;
   @include lg {
     top: -35%;
     left: -35%;
     width: 32vw;
-    height: 45vw;
+    height: 50vw;
   }
+
+  .mediaContainer {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;    /* Centers vertically */
+    height: 100%;           /* Full height of the container */
+    width: 100%;            /* Full width of the container */
+    overflow: hidden;       /* Ensures no overflow */
+  }
+  
+  .centeredVideo {
+               
+    height:100%;   
+    
+  }
+
   // clip-path: polygon(
   //   0% 98%,
   //   3% 100%,

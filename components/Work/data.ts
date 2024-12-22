@@ -3,6 +3,7 @@ type Data = {
   desc: string[];
   color: string;
   link?:string;
+  media?: {url: string, isVideo: boolean}[];
 };
 
 export const data: Data[] = [
@@ -19,6 +20,10 @@ export const data: Data[] = [
       "Signalétique",
     ],
     color: "#dbedf2",
+    media: [
+      { url: "/work/1.mov", isVideo: true },
+      { url: "/work/1-2.mp4", isVideo: true },
+    ],
   },
   {
     name: "빠르게",
@@ -30,11 +35,19 @@ export const data: Data[] = [
       "Shooting photo / vidéo",
     ],
     color: "#fcebe4",
+    media: [
+      { url: "/work/2.mov", isVideo: true },
+      { url: "/work/2-1.mp4", isVideo: true },
+    ],
   },
   {
     name: "많은 사람들에게",
     desc: ["Direction artistique", "Identité de marque", "print / digital"],
     color: "#fff4ce",
+    media: [
+      { url: "/work/3.mov", isVideo: true },
+      { url: "/work/3-1.mp4", isVideo: true },
+    ],
   },
   {
     name: "<span class=small-stroke>효과적으로 <br> 연결하는 제안을 드립니다</span>",
@@ -45,6 +58,10 @@ export const data: Data[] = [
       "print / digital",
     ],
     color: "#daf2e0",
+    media: [
+      { url: "/work/4.mov", isVideo: true },
+      { url: "/work/4-2.mp4", isVideo: true },
+    ],
   },
   // {
   //   name: "Everphone",

@@ -9,6 +9,7 @@ import { useSnapshot } from "valtio";
 import { store } from "@/store";
 import Shape from "./Shape";
 import Link from "next/link";
+import MediaDisplay from "./MediaDisplay";
 
 const Work = () => {
   const container = useRef<HTMLElement>(null);
@@ -76,8 +77,8 @@ const Work = () => {
               .from(`.slide-${i}`, { yPercent: i === 0 ? 0 : 100 }, "<")
               .from(`.heading-${i}`, { scale: 1.6 }, "<0.7")
               .from(`.image-${i}`, {
-                left: isDesktop ? "120%" : "80%",
-                top: isDesktop ? "50%" : "100%",
+                left: isDesktop ? "110%" : "80%",
+                top: isDesktop ? "60%" : "100%",
                 rotate: -35,
                 duration: 5,
               })
@@ -85,7 +86,7 @@ const Work = () => {
                 `.image-second-${i}`,
                 {
                   left: isDesktop ? "120%" : "80%",
-                  top: isDesktop ? "50%" : "100%",
+                  top: isDesktop ? "50%" : "130%",
                   rotate: -35,
                   duration: 5,
                 },
@@ -115,41 +116,44 @@ const Work = () => {
           </h2>
         </div>
 
-        {data.map(({ name,link }, i) => {
+        {data.map(({ name, link,media}, i) => {
           return (
-            <Link href={link? link : "#"}>
-            <div key={i} className={`slide-${i} ${s.slide}`}>
-              <Shape id={i} />
-              <Image
-                className={`image-${i} ${s.image}`}
-                src={`/work/${i}.webp`}
-                alt="image"
-                height={2000}
-                width={2000}
-              />
-              <Image
-                className={`image-second-${i} ${s.image}`}
-                src={`/work/${i + 1}.webp`}
-                alt="image"
-                height={2000}
-                width={2000}
-              />
-
-              <div
-                onPointerEnter={workHeadingPointerEnter}
-                onPointerLeave={workHeadingPointerLeave}
-              >
-                <h2
-                  className={`heading-${i}`}
-                  dangerouslySetInnerHTML={{ __html: name }}
-                ></h2>
-                <h2 className={`heading-${i}`} data-stroke
-                dangerouslySetInnerHTML={{__html:name}}
+            <Link href={link ? link : "#"}>
+              <div key={i} className={`slide-${i} ${s.slide}`}>
+                <Shape id={i} />
+                <div
+                  className={`image-${i} ${s.image}`}
                 >
-                  
-                </h2>
+                  <MediaDisplay isVideo={media?.[0]?.isVideo || false}
+                    mediaSrc={media?.[0]?.url || ""}
+                    altText={`video`} />
+                </div>
+
+                <div
+                  className={`image-second-${i} ${s.image}`}
+
+                >
+                   <MediaDisplay isVideo={media?.[1]?.isVideo || false}
+                    mediaSrc={media?.[1]?.url || ""}
+                    altText={`video`} />
+                </div>
+
+
+                <div
+                  onPointerEnter={workHeadingPointerEnter}
+                  onPointerLeave={workHeadingPointerLeave}
+                >
+                  <h2
+                    className={`heading-${i}`}
+                    dangerouslySetInnerHTML={{ __html: name }}
+                  ></h2>
+                  <h2 className={`heading-${i}`} data-stroke
+                    dangerouslySetInnerHTML={{ __html: name }}
+                  >
+
+                  </h2>
+                </div>
               </div>
-            </div>
             </Link>
           );
         })}
