@@ -14,10 +14,11 @@ const Footer = () => {
         .timeline({
           scrollTrigger: {
             trigger: container.current,
-            start: "top center",
+            start: "top bottom",
             toggleActions: "play none none reverse",
             fastScrollEnd: true,
             preventOverlaps: true,
+           
           },
           defaults: {
             ease: "power4.inOut",

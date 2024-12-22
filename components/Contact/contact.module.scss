@@ -8,10 +8,13 @@
   position: relative;
   margin-top: 100px;
   font-family: Shilla;
+
   @include lg {
     margin-top: 140px;
+    margin-bottom: -140px;
     min-height: 100vh;
   }
+
   h1 {
     position: relative;
     z-index: 2;
@@ -24,16 +27,19 @@
     line-height: calc(4rem * 1.2);
     cursor: default;
     text-transform: uppercase;
+
     span {
       display: inline-block;
       transform-origin: bottom;
     }
+
     @include lg {
       font-size: 15.625rem;
       line-height: calc(15.625rem / 2);
       margin-top: calc(15.625rem / 2);
       margin-bottom: calc(15.625rem / 2);
     }
+
     @include xxl {
       margin-top: 10.937rem;
       margin-bottom: 10.937rem;
@@ -48,11 +54,14 @@
   margin-inline: auto;
   position: relative;
   z-index: 4;
+
   @include lg {
     margin-bottom: 100px;
   }
+
   svg {
     width: 70vw;
+
     path {
       fill: transparent;
       stroke-dasharray: 1290px;
@@ -67,6 +76,7 @@
   margin-top: 100px;
   gap: 24px;
   padding-inline: 20px;
+
   @include lg {
     padding-inline: 40px;
     margin-top: 250px;
@@ -77,24 +87,29 @@
     position: relative;
     font-size: 1.5rem;
     line-height: calc(1.5rem * 1.5);
+
     @include lg {
       font-size: 4rem;
       line-height: calc(4rem * 1.2);
     }
+
     @include xxl {
       font-size: 4vw;
       line-height: calc(4vw * 1.2);
     }
   }
+
   p {
     font-weight: 400;
     position: relative;
     font-size: 1.5rem;
     line-height: calc(1.5rem * 1.5);
+
     @include lg {
       font-size: 2rem;
       line-height: calc(2rem * 1.2);
     }
+
     @include xxl {
       font-size: 2vw;
       line-height: calc(2vw * 1.2);
@@ -108,6 +123,7 @@
   justify-content: center;
   flex-direction: column;
   gap: 33px;
+
   @include lg {
     flex-direction: row;
     gap: 90px;
@@ -120,28 +136,34 @@
   left: 35%;
   transform: translateY(-40%);
   z-index: -1;
+
   svg {
     width: 9vw;
     height: 7vw;
   }
 }
+
 .pathTwo {
   position: absolute;
   right: -10%;
   top: -150px;
   z-index: -1;
+
   @include lg {
     top: 0px;
   }
+
   svg {
     width: 45vw;
     height: 24vw;
   }
 }
+
 .pathThree {
   position: absolute;
   top: 200px;
   right: -27%;
+
   svg {
     width: 42vw;
     height: 36vw;
@@ -159,32 +181,118 @@
   margin-top: 350px;
 }
 
+
+
 .form {
+  @include lg {
+    height: 100vh;
+    flex-direction: column;
+    align-items: end;
+  }
   display: flex;
-  flex-direction: column;
-  align-items: end;
   gap: 24px;
   width: 90%;
-  margin-top: 60px;
+  margin-top: 140px;
   margin-inline: auto;
-  height:100vh;
+  height: 80vh;
+
+  .submit {
+    @include lg {
+      width: 100%;
+    }
+    width: 100%;
+    border-radius: 60px;
+    font-family: Shilla;
+    font-size: 1.7rem;
+    font-weight: 900;
+    margin-top: 30px;
+    height:60px;
+  }
+
+  .input_container {
+    position: relative;
+    margin-bottom: 20px;
+
+    input {
+      padding: 7px 20px;
+      margin-top: 10px;
+      width: 100%;
+      min-height: 45px;
+      background-color: transparent;
+      border: solid var(--primary-text);
+      border-width: 0px 0px 2px 0px;
+      font-size: 1.5rem;
+      line-height: calc(1.5rem);
+      transition: border-color 0.3s ease, background-color 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: var(--primary-color, #000000); // Default to blue if not defined
+      }
+
+      &:focus+label,
+      &:not(:placeholder-shown)+label {
+        transform: translateY(-150%);
+        font-size: 1.2rem;
+        color: var(--primary-color, #000000); // Default to blue if not defined
+      }
+
+
+
+    }
+
+
+
+
+    label {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.5rem;
+      color: rgba(0, 0, 0, 0.6);
+      pointer-events: none;
+      transition: all 0.3s ease;
+
+      input:focus+&,
+      input:not(:placeholder-shown)+& {
+        transform: translateY(-150%);
+        font-size: 1.2rem;
+        color: var(--primary-color); // Change label color on focus or when filled
+      }
+    }
+
+
+  }
 
 
   .box {
+    @include lg {
+      width: 70%;
+      border-width: 3px 0px 0px 3px;
+    }
+    padding: 20px;
     flex-direction: column;
     display: flex;
     border: 3px;
-    height:100%;
-    border-color:black;
+    height: 100%;
+    width: 100%;
+    border-color: black;
     border-style: solid;
-    border-width: 3px 0px 0px 3px;
-    width: 70%;
+    
+    
 
     .box_input {
       display: flex;
       flex-direction: column;
       gap: 24px;
-      border: 1px solid red;
+      justify-content: center;
+      @include lg {
+        width: 80%;
+        height: 80%;
+      }
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -204,30 +312,15 @@
     padding-inline: 60px;
     margin-inline: auto;
   }
+
   div {
     display: flex;
     flex-direction: column;
     gap: 24px;
+
     @include lg {
       flex-direction: row;
     }
-    input {
-      padding: 10px 20px;
-      width: 100%;
-      min-height: 45px;
-      background-color: rgba(255, 255, 255, 0.6);
-      border: 2px solid var(--primary-text);
-      font-size: 2rem;
-      line-height: calc(2rem * 1.4);
-      @include lg {
-        width: 50%;
-      }
-      &::placeholder {
-        color: rgba(0, 0, 0, 0.6);
-      }
-      &:focus {
-        outline: none;
-      }
-    }
+
   }
 }

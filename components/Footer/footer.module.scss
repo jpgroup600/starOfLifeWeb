@@ -10,6 +10,8 @@
   margin-top: 100px;
   padding-bottom: 50px;
   overflow: hidden;
+  background-color: black;
+  color: white;
   @include lg {
     height: 420px;
     margin-top: 140px;
@@ -24,6 +26,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 25px;
+  color: white;
   margin-top: 50px;
   a,
   span {
@@ -136,6 +139,7 @@
 
 .link {
   position: relative;
+  color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
   a {
     opacity: 1;

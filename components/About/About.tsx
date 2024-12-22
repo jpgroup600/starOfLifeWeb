@@ -14,6 +14,17 @@ const About = () => {
   const para = useRef<HTMLParagraphElement>(null);
   const paraHide = useRef<HTMLParagraphElement>(null);
 
+  const htmlContent = `
+    
+<strong>고객의 성공을 이끄는 앱 개발 및 마케팅 솔루션 전문 기업</strong> <br/>
+우리는 고객의 아이디어를 발전시켜 사용자에게 <strong>사랑받는 앱</strong>으로 구현하고, 이를 시장에서 <strong>돋보이게 만드는 마케팅 솔루션</strong>을 제공합니다.
+
+단순히 서비스를 제공하는 것을 넘어, 고객의 <strong>비전과 아이디어를 현실로 만들어</strong> 지속 가능한 성장을 지원합니다.</strong> <br/>
+<strong>고객의 성공이 곧 우리의 성공이라는 믿음</strong>으로, 함께 나아가며 성장할 수 있는 파트너가 되겠습니다.<br/> <br/>
+
+고객과 함께 더 나은 미래를 만들어가며, <strong>당신의 비즈니스가 시장에서 빛날 수 있도록</strong> 최선을 다하겠습니다.
+  `
+
   useIsomorphicLayoutEffect(() => {
     SplitType.create(para.current!, {
       types: "words",
@@ -134,22 +145,8 @@ const About = () => {
           alt="owner"
         />
         <div className={`about-para-box ${s.box}`}>
-          <p ref={para} className={s.content}>
-            {`Hello! I'm Philippe, a passionate digital designer with a focus on
-            aesthetics and innovation. I'm also dedicated to using design and
-            technology for positive social change. Outside of work, I enjoy
-            spending time with my two kids, as well as indulging in design,
-            interior decor, travel, culture, and art, all of which inspire my
-            creative process.`}
-          </p>
-          <p ref={paraHide} data-hide className={s.content}>
-            {`Hello! I'm Philippe, a passionate digital designer with a focus on
-            aesthetics and innovation. I'm also dedicated to using design and
-            technology for positive social change. Outside of work, I enjoy
-            spending time with my two kids, as well as indulging in design,
-            interior decor, travel, culture, and art, all of which inspire my
-            creative process.`}
-          </p>
+          <p ref={para} className={s.content} dangerouslySetInnerHTML={{ __html: htmlContent }} />
+          <p ref={paraHide} data-hide className={s.content} dangerouslySetInnerHTML={{ __html: htmlContent }} />
         </div>
       </div>
     </section>

@@ -4,7 +4,7 @@ import { ContactHeading, ContactPathOne } from "../Svg/Svg";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import gsap from "gsap";
-
+import ContactInput from "./ContactInput";
 const Contact = () => {
   const container = useRef<HTMLDivElement>(null);
   useGSAP(
@@ -80,19 +80,17 @@ const Contact = () => {
         <p>이제 사업 구축은 저희에게 맡기고 성장 전략에 집중하세요!</p>
       </div>
       <div className={s.form}
-        style={{ border: "1px solid red" }}
       >
         <div className={s.box}>
           <div className={s.box_input}>
-            <input className="input" type="text" placeholder="Company Name" />
-            <input className="input" type="text" placeholder="Company Status" />
-          
-          
-            <input className="input" type="email" placeholder="Email" />
-            <input className="input" type="text" placeholder="Phone" />
-            <button className="submit">Submit</button>
+            <ContactInput lablel="회사명" id="companyName" />
+            <ContactInput lablel="담당자명" id="email" />
+            <ContactInput lablel="이메일" id="phone" />
+            <ContactInput lablel="연락처" id="message" />
+            <button className={s.submit}>상담 신청하기</button>
+
           </div>
-          
+
         </div>
       </div>
     </section>
