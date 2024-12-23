@@ -72,7 +72,7 @@ const KoreanArchive = () => {
               pin: true,
               pinSpacing: true,
               scrub: 2,
-              end: "+=1000",
+              end: "+1800",
             },
             defaults: {
               ease: "power4.inOut",
