@@ -75,12 +75,12 @@ const Work = () => {
                 "<"
               )
               .from(`.slide-${i}`, { yPercent: i === 0 ? 0 : 100 }, "<")
-              .from(`.heading-${i}`, { scale: 1.6 }, "<0.7")
+              .from(`.heading-${i}`, { scale: 1.6 ,duration: 3}, "<0.7",)
               .from(`.image-${i}`, {
                 left: isDesktop ? "110%" : "80%",
                 top: isDesktop ? "60%" : "100%",
                 rotate: -35,
-                duration: 5,
+                duration: 6,
               })
               .from(
                 `.image-second-${i}`,
@@ -88,7 +88,7 @@ const Work = () => {
                   left: isDesktop ? "120%" : "80%",
                   top: isDesktop ? "50%" : "130%",
                   rotate: -35,
-                  duration: 5,
+                  duration: 6,
                 },
                 "<0.6"
               )

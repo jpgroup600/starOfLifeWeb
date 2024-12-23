@@ -56,7 +56,7 @@ const Services = () => {
         defaults: { ease: "none" },
       });
       data.map((e, i) => {
-        tl.to(`.slide-${i}`, { clipPath: "circle(100% at 50% 50%)" }) //
+        tl.to(`.slide-${i}`, { clipPath: "circle(100% at 50% 50%)" , duration: 4}) //
           .to(
             `.shapebox-shape-${i}`,
             {
@@ -81,6 +81,7 @@ const Services = () => {
     <section id="services" ref={container} className={s.main}>
       <div className={`services-heading ${s.heading}`}>
         <ServicesHeading />
+        <div className={s.heading_text}>저희는 이런걸 도와드립니다</div>
       </div>
       <div className={`slider ${s.slider}`}>
         {data.map(({ heading, info }, i) => {
