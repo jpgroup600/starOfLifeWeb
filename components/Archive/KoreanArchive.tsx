@@ -79,8 +79,8 @@ const KoreanArchive = () => {
             },
           })
           .to(".content", { scale: 0 })
-          .to(".box-1", { xPercent: 0 })
-          .to(".box-2", { xPercent: 0 });
+          .to(".box-1", { xPercent: 0, duration:8 })
+          .to(".box-2", { xPercent: 0, duration:16 });
       });
     },
     { scope: container }
@@ -89,7 +89,7 @@ const KoreanArchive = () => {
   return (
     <section id="archive" ref={container} className={s.main}>
       <div className={`archive-heading ${s.heading}`}>
-        <ArchiveHeading />
+        {/* <ArchiveHeading /> */}
       </div>
       <div className={`korean ${s.koreanContent}`}>
         <div className={`box-1 ${s.koreanContent_box}`}>
