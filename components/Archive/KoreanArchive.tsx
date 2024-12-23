@@ -49,16 +49,16 @@ const KoreanArchive = () => {
               preventOverlaps: true,
               pin: true,
               pinSpacing: true,
-              scrub: 2,
-              end: "+=1000",
+              scrub: 1,
+              end: "400%",
             },
             defaults: {
               ease: "power4.inOut",
             },
           })
-          .to(".content", { scale: 0 })
-          .to(".box-1", { xPercent: 0 })
-          .to(".box-2", { xPercent: 0 }, "<0.2");
+          .to(".content", { scale: 0 , duration:2})
+          .to(".box-1", { xPercent: 0,duration:2 })
+          .to(".box-2", { xPercent: 0, duration: 2 }, "<0.2");
       });
 
       mm.add("(max-width: 799px)", () => {
@@ -71,8 +71,7 @@ const KoreanArchive = () => {
               preventOverlaps: true,
               pin: true,
               pinSpacing: true,
-              markers: true,
-              scrub: 2,
+              scrub: 1,
               end: "400%",
             },
             defaults: {

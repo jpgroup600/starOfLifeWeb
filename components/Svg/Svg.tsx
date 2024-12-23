@@ -1,6 +1,6 @@
 import React from "react";
 import { data } from "../Services/data";
-
+import s from "./svg.module.scss";
 export const Logo = () => {
   return (
     <svg viewBox="0 0 481 369" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1953,6 +1953,7 @@ export const HeroArrowDown = () => {
       height="38"
       viewBox="0 0 34 38"
       fill="none"
+      className={s.bounceAnimation}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

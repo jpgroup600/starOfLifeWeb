@@ -129,3 +129,41 @@
     bottom: 25px;
   }
 }
+
+.shapeBox {
+  position: absolute;
+  // background-color: red;
+  height: 100vh;
+  border: 1px solid red;
+  
+  top: 20%;
+  left: -150%;
+  z-index: 2;
+  div {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    transform: scale(1) translateX(200%) scale(2);
+  }
+
+  @include lg {
+    top: 20%;
+    left: -40%;
+  }
+}
+
+.bounce-animation {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
