@@ -71,16 +71,17 @@ const KoreanArchive = () => {
               preventOverlaps: true,
               pin: true,
               pinSpacing: true,
+              markers: true,
               scrub: 2,
-              end: "+1800",
+              end: "400%",
             },
             defaults: {
               ease: "power4.inOut",
             },
           })
-          .to(".content", { scale: 0 })
-          .to(".box-1", { xPercent: 0, duration:8 })
-          .to(".box-2", { xPercent: 0, duration:16 });
+          .to(".content", { scale: 0,duration:8 })
+          .to(".box-1", { xPercent: 0, duration:4 })
+          .to(".box-2", { xPercent: 0, duration:32 });
       });
     },
     { scope: container }
