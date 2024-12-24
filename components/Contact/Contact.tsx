@@ -5,8 +5,45 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import gsap from "gsap";
 import ContactInput from "./ContactInput";
+import { useSnapshot } from "valtio";
+import { store } from "@/store";
+import {useState} from "react";
+
+interface UserLeads {
+  companyName: string;
+  email: string;
+  phone: string;
+  name: string;
+}
+
+
 const Contact = () => {
   const container = useRef<HTMLDivElement>(null);
+  const { workHeadingPointerEnter, workHeadingPointerLeave } =
+  useSnapshot(store);
+  const [userLeads, setUserLeads] = useState<UserLeads>({
+    companyName: "",
+    name: "",
+    email: "",
+    phone: "",
+  });
+
+  const handleSubmit = async () => {
+    const response = await fetch('/api/addLeads', {
+      method: 'POST',
+      body: JSON.stringify(userLeads),
+    });
+    const data = await response.json();
+    if(data.success) {
+      alert('상담 신청이 완료되었습니다.');
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUserLeads({...userLeads, [e.target.id]: e.target.value});
+    console.log(userLeads);
+  };
+
   useGSAP(
     () => {
       gsap
@@ -83,11 +120,14 @@ const Contact = () => {
       >
         <div className={s.box}>
           <div className={s.box_input}>
-            <ContactInput lablel="회사명" id="companyName" />
-            <ContactInput lablel="담당자명" id="email" />
-            <ContactInput lablel="이메일" id="phone" />
-            <ContactInput lablel="연락처" id="message" />
-            <button className={s.submit}>상담 신청하기</button>
+            <ContactInput label="회사명" id="companyName" onchange={handleChange} value={userLeads.companyName} />
+            <ContactInput label="담당자명" id="name" onchange={handleChange} value={userLeads.name} />
+            <ContactInput label="이메일" id="email" onchange={handleChange} value={userLeads.email} />
+            <ContactInput label="연락처" id="phone" onchange={handleChange} value={userLeads.phone} />
+            <button 
+            className={s.submit}
+            onClick={handleSubmit}
+            >상담 신청하기</button>
 
           </div>
 

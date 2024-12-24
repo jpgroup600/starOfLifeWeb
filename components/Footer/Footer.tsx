@@ -63,7 +63,7 @@ const Footer = () => {
         <CustomLink href="https://www.behance.net/Layani" text="Behance" />
       </div>
       <div className={s.foot}>
-        <p className="footer-foot">From Berlin & Vienna with Heart</p>
+        <p className="footer-foot">From Wise Rootree</p>
       </div>
     </footer>
   );
