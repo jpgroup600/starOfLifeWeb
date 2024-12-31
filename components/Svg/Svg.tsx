@@ -1702,12 +1702,12 @@ export const ServiceMenu = () => {
         <textPath xlinkHref="#curve">
           {data.map((e, i) => {
             return (
-              <React.Fragment key={i}>
+              <>
                 <tspan>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </tspan>
                 <tspan>{e.heading}</tspan>
-              </React.Fragment>
+              </>
             );
           })}
         </textPath>
