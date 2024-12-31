@@ -52,14 +52,33 @@ const KoreanServices = () => {
         },
       });
 
-      koreanData.map(({ title }, i) => {
-        if (koreanData.length !== i + 1) {
-          tl.to(`.cover-${i + 1}`, { yPercent: 0, duration: 2 }).to(
-            ".title span",
-            { text: title },
-            "<"
-          );
-        }
+      koreanData.map(({ title, heading }, i) => {
+        tl.to(`.heading-${i} .${s.reveal}`, {
+          xPercent: 100,
+          duration: 1,
+          ease: "power2.inOut",
+        });
+      
+        // Then animate both images in the same section
+        tl.to(`.cover-${i} .${s.imageWrapper}:nth-child(1) .${s.reveal}`, {
+          xPercent: 100,
+          duration: 2,
+          ease: "power2.inOut",
+        })
+        .to(`.cover-${i} .${s.imageWrapper}:nth-child(2) .${s.reveal}`, {
+          xPercent: 100,
+          duration: 2,
+          ease: "power2.inOut",
+        }, "-=0.5");
+
+        tl.to(`.cover-${i + 1}`, { yPercent: 0, duration: 2 }).to(
+          ".title span",
+          { text: title },
+          
+        )
+
+
+
       });
     },
     { scope: container }
@@ -95,7 +114,10 @@ const KoreanServices = () => {
                 </div>
                 <div className={s.koreansection_cover_box}>
                   <div className={s.koreansection_cover_cardHead}>
-                    <h3>{heading}</h3>
+                    <h3 className={`heading-${i} ${s.heading}`}>
+                      <div className={s.reveal}></div>
+                      <span>{heading}</span>
+                    </h3>
                     <TopLeftArrow />
                   </div>
                   <div className={s.koreansection_cover_cardMid}>
@@ -110,18 +132,26 @@ const KoreanServices = () => {
                   </div>
 
                   <div className={s.koreansection_cover_cardBody}>
-                    <Image
-                      src={imageOne}
-                      alt="img"
-                      height={1080}
-                      width={1920}
-                    />
-                    <Image
-                      src={imageTwo}
-                      alt="img"
-                      height={1080}
-                      width={1920}
-                    />
+                    <div className={s.imageWrapper}>
+                      <div className={s.reveal}></div>
+                      <Image
+                        src={imageOne}
+                        alt="img"
+                        height={1080}
+                        width={1920}
+                      />
+                    </div>
+
+                    <div className={`${s.imageWrapper} ${s.imageWrapperTwo}`}>
+                      <div className={s.reveal}></div>
+                      <Image
+                        src={imageTwo}
+                        alt="img"
+                        height={1080}
+                        width={1920}
+                      />
+                    </div>
+                    
                   </div>
                 </div>
               </div>

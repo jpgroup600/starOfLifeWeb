@@ -51,7 +51,7 @@ const Footer = () => {
         <CustomLink href="/" text="About" />
         <CustomLink href="/" text="Contact" />
       </nav>
-      <div className={`footer-nav-2 ${s.nav}`}>
+      {/* <div className={`footer-nav-2 ${s.nav}`}>
         <CustomLink
           href="https://www.linkedin.com/in/philippe-layani-56636a77"
           text="Linkedin"
@@ -61,7 +61,7 @@ const Footer = () => {
           text="Instagram"
         />
         <CustomLink href="https://www.behance.net/Layani" text="Behance" />
-      </div>
+      </div> */}
       <div className={s.foot}>
         <p className="footer-foot">From Wise Rootree</p>
       </div>

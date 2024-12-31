@@ -33,7 +33,6 @@ export default function Home() {
       <Archive />
       <Client />
       <KoreanServices />
-      <About />
       <Contact />
       <Footer />
     </>

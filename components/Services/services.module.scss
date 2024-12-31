@@ -330,7 +330,7 @@
   width: 100%;
   gap: 24px;
   min-height: 100vh;
-  max-height: 100vh;
+  max-height: 200vh;
   
 
   h2 {
@@ -356,6 +356,7 @@
     border-top: 1px solid rgba(100, 100, 100, 0.5);
     flex-direction: column;
     padding-inline: 16px;
+    padding-top: 30px;
     gap: 24px;
     background-color: var(--bg-two);
     position: absolute;
@@ -365,6 +366,22 @@
       padding-top: 40px;
       padding-right:105px;
     }
+    .imageWrapper {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      .reveal {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ebebeb; // Match your background color
+        z-index: 1;
+      }
+    }
+
     &_list {
       flex-direction: column;
       gap: 2vw;
@@ -404,11 +421,31 @@
         width: 80%;
         gap: 2vw;
       }
+
+      .heading {
+        position: relative;
+        overflow: hidden;
+        
+        .reveal {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: #ebebeb;
+          z-index: 1;
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+      }
     }
     &_cardBody {
       display: flex;
+      flex-direction: column;
       @include lg {
         gap: 1vw;
+        display: flex;
+      flex-direction: row;
       }
       img:nth-child(1) {
         object-fit: cover;
@@ -416,18 +453,25 @@
         height: 100%;
         aspect-ratio: 16/9;
         @include lg {
-          width: 65%;
-          height: 80%;
+          width: 100%;
+          height: 100%;
         }
       }
       img:nth-child(2) {
-        display: none;
+        display: block;
 
         object-fit: cover;
         @include lg {
-          width: 35%;
-          height: 60%;
+          width: 100%;
+          height: 100%;
           display: block;
+        }
+      }
+      .imageWrapperTwo {
+      
+        @include lg {
+          width: 85%;
+          height: 85%;
         }
       }
     }
@@ -479,5 +523,16 @@
         }
       }
     }
+  }
+}
+
+.sliding_text {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.8s ease;
+  
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
