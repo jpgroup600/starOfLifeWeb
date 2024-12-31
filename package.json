@@ -13,13 +13,14 @@
     "@studio-freight/react-lenis": "^0.0.47",
     "gsap": "^3.12.5",
     "lottie-react": "^2.4.0",
-    "mongodb": "^6.12.0",
+    "lottie-web": "^5.12.2",
     "next": "14.2.1",
     "react": "^18",
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.4",
     "react-use-window-scroll": "^1.1.7",
     "split-type": "^0.3.4",
+    "swiper": "^11.1.15",
     "valtio": "^1.13.2"
   },
   "devDependencies": {

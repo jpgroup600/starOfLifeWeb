@@ -8,9 +8,18 @@
   position: relative;
   margin-top: 120px;
   overflow: hidden;
+  min-height: 100vh;
   @include lg {
     margin-top: 140px;
     min-height: 100vh;
+  }
+
+  .title {
+    margin-top: 25px;
+    @include lg {
+      margin-top: 30px;
+      margin-left:20px;
+    }
   }
   h1 {
     position: relative;
@@ -65,7 +74,6 @@
     font-weight: 900;
     font-weight: 100;
     font-family: Shilla;
-    margin-top: 100px;
 
     @include lg {
       font-size: 3.4rem;
@@ -228,7 +236,6 @@
   width: 100%;
   margin-top: 150px;
   overflow: hidden;
-  
 }
 
 .slide {
@@ -268,8 +275,6 @@
       gap: 10px;
       font-family: Shilla;
       font-size: 2.5rem;
-      
-      
     }
   }
   h3 {
@@ -317,4 +322,162 @@
   left: -55px;
   font-size: 2.5rem;
   line-height: calc(2.5rem * 1.2);
+}
+
+.koreansection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
+  min-height: 100vh;
+  max-height: 100vh;
+  
+
+  h2 {
+    font-family: "Shilla";
+    padding-inline: 16px;
+    overflow: hidden;
+    span {
+      display: inline-block;
+    }
+    @include lg {
+      font-size: 5.2vw;
+      line-height: calc(5.2vw * 1.2);
+      padding-inline: 2vw;
+    }
+  }
+  &_relative {
+    position: relative;
+  }
+
+  &_cover {
+    display: flex;
+    width: 100%;
+    border-top: 1px solid rgba(100, 100, 100, 0.5);
+    flex-direction: column;
+    padding-inline: 16px;
+    gap: 24px;
+    background-color: var(--bg-two);
+    position: absolute;
+    @include lg {
+      flex-direction: row;
+      padding-inline: 2vw;
+      padding-top: 40px;
+      padding-right:105px;
+    }
+    &_list {
+      flex-direction: column;
+      gap: 2vw;
+      width: 100%;
+      display: none;
+      @include lg {
+        display: flex;
+        width: 20%;
+        padding-left:20px;
+      }
+      h4 {
+        font-family: "Shilla";
+        display: flex;
+        align-items: center;
+        font-size: 1.5vw;
+        line-height: calc(1.5vw * 1.5);
+
+        span {
+          display: inline-block;
+          margin-right: 6px;
+          border-radius: 999px;
+          height: 1.5vw;
+          width: 1.5vw;
+          background-color: #1ea852;
+        }
+      }
+    }
+    &_box {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 24px;
+      justify-content: space-around;
+      min-height: calc(100vh - 59px);
+      @include lg {
+        min-height: auto;
+        width: 80%;
+        gap: 2vw;
+      }
+    }
+    &_cardBody {
+      display: flex;
+      @include lg {
+        gap: 1vw;
+      }
+      img:nth-child(1) {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 16/9;
+        @include lg {
+          width: 65%;
+          height: 80%;
+        }
+      }
+      img:nth-child(2) {
+        display: none;
+
+        object-fit: cover;
+        @include lg {
+          width: 35%;
+          height: 60%;
+          display: block;
+        }
+      }
+    }
+    &_cardMid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      h4 {
+        font-family: "Shilla";
+        display: flex;
+        align-items: center;
+
+        span {
+          display: inline-block;
+          margin-right: 6px;
+          border-radius: 999px;
+          height: 12px;
+          width: 12px;
+          background-color: #1ea852;
+        }
+      }
+      @include lg {
+        display: none;
+      }
+    }
+    &_cardHead {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      @include lg {
+        gap: 10vw;
+      }
+      h3 {
+        font-family: "Shilla";
+
+        @include lg {
+          font-size: 3vw;
+          line-height: calc(3vw * 1.5);
+        }
+      }
+      svg {
+        min-height: 42px;
+        height: 42px;
+        min-width: 42px;
+        width: 42px;
+        @include lg {
+          height: 10vw;
+          width: 10vw;
+        }
+      }
+    }
+  }
 }

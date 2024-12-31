@@ -10,6 +10,7 @@ import Head from "next/head";
 import KoreanArchive from "@/components/Archive/KoreanArchive";
 import Archive from "@/components/Archive/Archive";
 import useChannelIO from "@/hooks/useChannel";
+import KoreanServices from "@/components/Services/KoreanServices";
 
 export default function Home() {
   useChannelIO("191ac84c-8517-4966-89ce-90152c22369e");
@@ -31,7 +32,7 @@ export default function Home() {
       <KoreanArchive />
       <Archive />
       <Client />
-      <Services />
+      <KoreanServices />
       <About />
       <Contact />
       <Footer />

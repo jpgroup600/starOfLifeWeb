@@ -19,21 +19,34 @@ export const data: Data[] = [
     desc: "Ignite success with my Brand Strategy service. I navigate the complexities of the market, sculpting a roadmap that defines, differentiates, and propels your brand forward. ",
     color: "#daf2e0",
     deg: 25,
-    info: ["맞춤형 프로그램 개발","자사몰 구축","앱 기획 & 개발", "관리 프로그램","브랜딩 페이지"]
+    info: [
+      "맞춤형 프로그램 개발",
+      "자사몰 구축",
+      "앱 기획 & 개발",
+      "관리 프로그램",
+      "브랜딩 페이지",
+    ],
   },
   {
     heading: "Design & Video",
     desc: "Immerse users in a seamless digital experience with my UX/UI Web Design. I blend functionality with aesthetics, creating interfaces that captivate and navigate effortlessly. ",
     color: "#fff4ce",
     deg: 342,
-    info : ["제품 촬영", "상세페이지 제작", "영상 제작","배너 제작"]
+    info: ["제품 촬영", "상세페이지 제작", "영상 제작", "배너 제작"],
   },
   {
     heading: "Operation",
     desc: "Elevate your online presence with my expert Web Development services, offered in collaboration with professionals from my extensive network. We specialize in crafting responsive, robust, and dynamic websites that effectively engage users by utilizing cutting-edge development solutions such as Wordpress, Typo3, Squarespace, Webflow, or custom code integrating libraries like Gsap, Next.js, or Locomotive Scroll. ",
     color: "#fcebe4",
     deg: 292,
-    info: ["상품관리", "자사몰", "오픈마켓", "소셜커머스","검색광고", "종합몰 & 폐쇄몰"]
+    info: [
+      "상품관리",
+      "자사몰",
+      "오픈마켓",
+      "소셜커머스",
+      "검색광고",
+      "종합몰 & 폐쇄몰",
+    ],
   },
   // {
   //   heading: "ERP-Systeme",
@@ -59,4 +72,31 @@ export const data: Data[] = [
   //   color: "#fff4ce",
   //   deg: 100,
   // },
+];
+
+export const koreanData = [
+  {
+    menu: ["검색광고", "배너광고", "SNS 광고", "유튜브 광고", "브랜딩"],
+    title: "Marketing",
+    heading:
+      "좋은 상품이 있으시지만 마케팅이 부족하신가요? 저희를 통해 배 성장을 체험해보세요",
+    imageOne: "/services/1.jpg",
+    imageTwo: "/services/0.jpg",
+  },
+  {
+    menu: ["검색광고", "배너광고", "SNS 광고", "유튜브 광고", "브랜딩"],
+    title: "Manufacturing",
+    heading:
+      "좋은 상품이 있으시지만 마케팅이 부족하신가요? 저희를 통해 배 성장을 체험해보세요",
+    imageOne: "/services/1.jpg",
+    imageTwo: "/services/0.jpg",
+  },
+  {
+    menu: ["검색광고", "배너광고", "SNS 광고", "유튜브 광고", "브랜딩"],
+    title: "Packaging",
+    heading:
+      "좋은 상품이 있으시지만 마케팅이 부족하신가요? 저희를 통해 배 성장을 체험해보세요",
+    imageOne: "/services/1.jpg",
+    imageTwo: "/services/0.jpg",
+  },
 ];
