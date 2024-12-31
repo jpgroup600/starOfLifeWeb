@@ -5,6 +5,7 @@ export type Data = {
   position: "normal" | "full";
   video?: string;
   lessPad?: boolean;
+  newStyle?:string;
 };
 
 export const data: Data[] = [
@@ -19,6 +20,7 @@ export const data: Data[] = [
     position: "normal",
     video: "/archive-videos/0.mov",
   },
+
   {
     heading: [
       "Client: Lorem ipsum",
@@ -26,10 +28,11 @@ export const data: Data[] = [
       "Date: consetetur ",
     ],
     para: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vero quaerat a, neque nostrum in assumenda facilis ipsam modi illo at vitae nobis blanditiis veritatis.",
-    imgVarient: "long",
+    imgVarient: "normal",
     position: "normal",
-    video: "/archive-videos/0.mov",
+    video: "/archive-videos/1.mp4",
   },
+
   {
     heading: [
       "Client: Zelasit Ksale",
@@ -40,8 +43,10 @@ export const data: Data[] = [
     imgVarient: "mobile",
     position: "normal",
     lessPad: true,
-    video: "/archive-videos/0.mov",
+    video: "/archive-videos/2.mov",
+    newStyle:'70px'
   },
+
   {
     heading: [
       "Client: Neuro Ka",
@@ -51,7 +56,7 @@ export const data: Data[] = [
     para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vero quaerat a, neque nostrum in assumenda facilis ipsam modi illo at vitae nobis blanditiis veritatis.",
     imgVarient: "normal",
     position: "normal",
-    video: "/archive-videos/0.mov",
+    video: "/archive-videos/3.webm",
   },
   {
     heading: [
@@ -60,9 +65,10 @@ export const data: Data[] = [
       "Date: consetetur ",
     ],
     para: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vero quaerat a, neque nostrum in assumenda facilis ipsam modi illo at vitae nobis blanditiis veritatis.",
-    imgVarient: "normal",
+    imgVarient: "mobile",
     position: "normal",
     lessPad: true,
-    video: "/archive-videos/0.mov",
+    video: "/archive-videos/4.mov",
+    newStyle : "-150px"
   },
 ];

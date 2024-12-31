@@ -11,12 +11,14 @@ const Card: React.FC<Props> = ({
   id,
   video,
   lessPad,
+  newStyle,
 }) => {
   return (
     <div
       data-varient={position}
       data-unknown={imgVarient}
-      className={`archive-card-${id} ${s.card}`}
+      className={`archive-card-${id} ${s.card} `}
+      style={newStyle ? { marginTop: newStyle } : {}}
     >
       <div
         style={{ backgroundImage: `url(/archive-frame/${imgVarient}.png)` }}
