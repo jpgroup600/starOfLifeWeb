@@ -7,6 +7,8 @@ import Link from "next/link";
 import MenuElements from "./MenuElements";
 import RandomLetter from "../Footer/RandomLetter";
 import CustomLink from "../Footer/CustomLink";
+
+
 const Header = ({
   menuBtnEnter,
   menuBtnLeave,
@@ -266,6 +268,7 @@ const Header = ({
       <header ref={header} id="unknown-header" className={s.main}>
         <div ref={logo} className={`${s.logo} logo`} id="unknown-logo">
           <Logo />
+          {/* <LottieHandle /> */}
         </div>
         <div className={s.menuBtn}>
           <button

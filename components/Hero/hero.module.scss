@@ -1,16 +1,15 @@
 @import "../../styles/breakpoint";
 
-
 .main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   width: 100%;
   position: relative;
   padding-inline: 20px;
   height: 100vh;
   margin-top: 40px;
+
   @include lg {
     margin-top: 0;
     height: 100vh;
@@ -37,36 +36,44 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  h2 {
-    font-size: 2rem;
-    line-height: calc(2rem * 1.5);
-    font-weight: 700;
-    text-align: center;
-    font-family: Shilla-bold;
-    br {
-      display: none;
-    }
-    @include lg {
-      text-align: left;
-      margin-inline: auto;
-      width: 80%;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      min-width: 1260px;
-      font-size: 4.28vw;
-      line-height: calc(4.28vw * 1.5);
-      br {
-        display: block;
-      }
-    }
+  @include lg {
+    padding-left: 5%;
   }
+  // h2 {
+  //   font-size: 2rem;
+  //   line-height: calc(2rem * 1.5);
+  //   font-weight: 700;
+  //   text-align: center;
+  //   font-family: Shilla-bold;
+  //   br {
+  //     display: none;
+  //   }
+  //   @include lg {
+  //     text-align: left;
+  //     margin-inline: auto;
+  //     width: 80%;
+  //     display: flex;
+  //     flex-wrap: wrap;
+  //     align-items: center;
+  //     min-width: 1260px;
+  //     font-size: 4.28vw;
+  //     line-height: calc(4.28vw * 1.5);
+  //     br {
+  //       display: block;
+  //     }
+  //   }
+  // }
   p {
     font-size: 1.2rem;
     line-height: calc(1.2rem * 1.5);
     max-width: 600px;
     text-align: center;
     font-family: Shilla-bold;
+    span {
+      opacity: 0;
+      display: inline-block;
+      transform: translateY(150%) rotate(36deg);
+    }
     @include lg {
       text-align: left;
       font-size: 2rem;
@@ -135,7 +142,7 @@
   // background-color: red;
   height: 100vh;
   border: 1px solid red;
-  
+
   top: 20%;
   left: -150%;
   z-index: 2;
@@ -157,7 +164,11 @@
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
   40% {
@@ -165,5 +176,27 @@
   }
   60% {
     transform: translateY(-5px);
+  }
+}
+
+.heading {
+  font-size: 2rem;
+  line-height: calc(2rem * 1.5);
+  font-weight: 700;
+  text-align: center;
+  font-family: Shilla-bold;
+  width: fit-content;
+  span:nth-child(odd) {
+    opacity: 1;
+    display: inline-block;
+    
+  }
+  span:nth-child(even) {
+    opacity: 1;
+    display: inline-block;
+  }
+  @include lg {
+    font-size: 4.28vw;
+    line-height: calc(4.28vw * 1.5);
   }
 }

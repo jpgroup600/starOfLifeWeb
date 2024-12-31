@@ -1,7 +1,7 @@
 export type Data = {
   heading: string[];
   para: string;
-  imgVarient: "normal" | "long" | "square" | "full";
+  imgVarient: "normal" | "long" | "square" | "full" | "mobile";
   position: "normal" | "full";
   video?: string;
   lessPad?: boolean;
@@ -17,6 +17,7 @@ export const data: Data[] = [
     para: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vero quaerat a, neque nostrum in assumenda facilis ipsam modi illo at vitae nobis blanditiis veritatis.",
     imgVarient: "normal",
     position: "normal",
+    video: "/archive-videos/0.mov",
   },
   {
     heading: [
@@ -27,6 +28,7 @@ export const data: Data[] = [
     para: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vero quaerat a, neque nostrum in assumenda facilis ipsam modi illo at vitae nobis blanditiis veritatis.",
     imgVarient: "long",
     position: "normal",
+    video: "/archive-videos/0.mov",
   },
   {
     heading: [
@@ -35,9 +37,10 @@ export const data: Data[] = [
       "Date: consetetur ",
     ],
     para: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vero quaerat a, neque nostrum in assumenda facilis ipsam modi illo at vitae nobis blanditiis veritatis.",
-    imgVarient: "square",
+    imgVarient: "mobile",
     position: "normal",
     lessPad: true,
+    video: "/archive-videos/0.mov",
   },
   {
     heading: [
@@ -48,6 +51,7 @@ export const data: Data[] = [
     para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vero quaerat a, neque nostrum in assumenda facilis ipsam modi illo at vitae nobis blanditiis veritatis.",
     imgVarient: "normal",
     position: "normal",
+    video: "/archive-videos/0.mov",
   },
   {
     heading: [
@@ -56,8 +60,9 @@ export const data: Data[] = [
       "Date: consetetur ",
     ],
     para: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vero quaerat a, neque nostrum in assumenda facilis ipsam modi illo at vitae nobis blanditiis veritatis.",
-    imgVarient: "square",
+    imgVarient: "normal",
     position: "normal",
     lessPad: true,
-  }
+    video: "/archive-videos/0.mov",
+  },
 ];

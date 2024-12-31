@@ -1,0 +1,112 @@
+@import "../../styles/breakpoint";
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &_heading {
+    font-family: Shilla;
+    position: relative;
+    text-align: center;
+    font-size: 4.7rem;
+    line-height: calc(4.7rem * 1.2);
+    padding-inline: 16px;
+    @include lg {
+      font-size: 13vw;
+      line-height: 1;
+    }
+  }
+  &_description {
+    font-weight: 700;
+    position: relative;
+    font-size: 1.5rem;
+    line-height: calc(1.5rem * 1.5);
+    padding-inline: 16px;
+    @include lg {
+      padding-inline: 64px;
+      font-size: 4rem;
+      line-height: calc(4rem * 1.2);
+    }
+
+    @include xxl {
+      font-size: 4vw;
+      line-height: calc(4vw * 1.2);
+    }
+  }
+}
+
+.slider {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &_cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include lg {
+      gap: 0.75vw;
+    }
+    &_btn {
+      display: none;
+      @include lg {
+        display: block;
+        border: none;
+        background-color: transparent;
+        padding: 0.5vw;
+        width: 6.5vw;
+        height: 6.5vw;
+        margin-bottom: 6vw;
+      }
+    }
+  }
+  &_frame {
+    border: 8px solid black;
+    border-radius: 46px;
+    height: calc(90vh - 100px);
+    width: 85vw;
+    overflow: hidden;
+    @include lg {
+      border: 0.586vw solid black;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.titles {
+  width: calc(100vw - 14vw);
+  overflow: hidden;
+  &_cover {
+    display: flex;
+    width: 100%;
+  }
+  h2 {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Shilla";
+    font-size: 42px;
+    line-height: calc(42px * 1.2);
+    @include lg {
+      width: 33.3%;
+      min-width: 33.3%;
+      max-width: 33.3%;
+      font-size: 6vw;
+      line-height: calc(6vw * 1.2);
+    }
+    &[data-active="true"] {
+      font-weight: 700;
+    }
+  }
+}

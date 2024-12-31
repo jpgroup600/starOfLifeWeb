@@ -1,6 +1,16 @@
-import React from "react";
+
 import { data } from "../Services/data";
 import s from "./svg.module.scss";
+// import Lottie from "lottie-react";
+import LottieFiles from "@/public/logoLottie.json"
+
+
+// export const LottieHandle = () => {
+//   return (
+//     <Lottie animationData={LottieFiles} style={{ width: "150px", height: "150px" }} />
+//   )
+// }
+
 export const Logo = () => {
   return (
     <svg viewBox="0 0 481 369" fill="none" xmlns="http://www.w3.org/2000/svg">

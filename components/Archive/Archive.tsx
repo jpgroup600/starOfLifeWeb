@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import Card from "./Card";
-import Elements from "./Elements";
 import s from "./archive.module.scss";
 import { data } from "./data";
 import { useGSAP } from "@gsap/react";
@@ -91,94 +90,6 @@ const Archive = () => {
                 scrub: 1,
               },
             });
-            gsap.to(".archive-card-5", {
-              yPercent: -20,
-
-              ease: "none",
-              scrollTrigger: {
-                trigger: ".archive-card-5",
-                scrub: 1,
-              },
-            });
-            gsap.to(".archive-card-6", {
-              yPercent: -60,
-              ease: "none",
-              scrollTrigger: {
-                trigger: ".archive-card-5",
-                scrub: 1,
-              },
-            });
-            gsap.to(".archive-card-7", {
-              yPercent: -20,
-              ease: "none",
-              scrollTrigger: {
-                trigger: ".archive-card-5",
-                scrub: 1,
-              },
-            });
-            gsap.to(".archive-card-8", {
-              yPercent: -20,
-
-              ease: "none",
-              scrollTrigger: {
-                trigger: ".archive-card-8",
-                scrub: 1,
-              },
-            });
-            gsap.to(".archive-card-9", {
-              yPercent: -20,
-
-              ease: "none",
-              scrollTrigger: {
-                trigger: ".archive-card-7",
-                scrub: 1,
-              },
-            });
-            gsap.to(".archive-card-10", {
-              yPercent: -60,
-
-              ease: "none",
-              scrollTrigger: {
-                trigger: ".archive-card-10",
-                scrub: 1,
-              },
-            });
-            gsap.to(".archive-card-11", {
-              yPercent: -100,
-
-              ease: "none",
-              scrollTrigger: {
-                trigger: ".archive-card-9",
-                scrub: 1,
-              },
-            });
-            gsap.to(".archive-card-12", {
-              yPercent: -40,
-
-              ease: "none",
-              scrollTrigger: {
-                trigger: ".archive-card-12",
-                scrub: 1,
-              },
-            });
-            gsap.to(".archive-card-13", {
-              yPercent: -70,
-
-              ease: "none",
-              scrollTrigger: {
-                trigger: ".archive-card-11",
-                scrub: 1,
-              },
-            });
-            gsap.to(".archive-card-15", {
-              yPercent: -70,
-
-              ease: "none",
-              scrollTrigger: {
-                trigger: ".archive-card-13",
-                scrub: 1,
-              },
-            });
           }
         }
       );
@@ -210,6 +121,7 @@ const Archive = () => {
       <Shape />
       <div className={`archive-heading ${s.heading}`}>
         <ArchiveHeading />
+        
       </div>
       <div ref={grid} className={s.grid}>
         {[...data].map((e, i) => {

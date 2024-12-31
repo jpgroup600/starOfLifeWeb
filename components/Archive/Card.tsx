@@ -19,18 +19,23 @@ const Card: React.FC<Props> = ({
       className={`archive-card-${id} ${s.card}`}
     >
       <div
-        style={{ backgroundImage: `url(/archive/${id}.png)` }}
+        style={{ backgroundImage: `url(/archive-frame/${imgVarient}.png)` }}
         data-varient={imgVarient}
         className={s.card_img}
       >
-        {video && (
-          <iframe
-            src={video}
-            className={s.card_video}
-            frameBorder={0}
-            allow="autoplay; fullscreen; picture-in-picture"
-          ></iframe>
-        )}
+        <div data-varient={imgVarient} className={s.card_video_box}>
+          {video && (
+            <video
+              data-varient={imgVarient}
+              src={video}
+              className={s.card_video}
+              muted
+            loop
+              autoPlay
+              playsInline
+            />
+          )}
+        </div>
       </div>
 
       <div data-varient={imgVarient} data-less={lessPad} className={s.card_box}>
