@@ -45,40 +45,36 @@ const KoreanServices = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".section",
-          end: "+=2000",
+          end: "+=6000",
           pin: true,
           pinSpacing: true,
-          scrub: 1,
+          scrub: 2,
         },
       });
 
-      koreanData.map(({ title, heading }, i) => {
-        tl.to(`.heading-${i} .${s.reveal}`, {
-          xPercent: 100,
-          duration: 1,
-          ease: "power2.inOut",
-        });
-      
-        // Then animate both images in the same section
-        tl.to(`.cover-${i} .${s.imageWrapper}:nth-child(1) .${s.reveal}`, {
-          xPercent: 100,
+      koreanData.map(({ nextTitle }, i) => {
+        tl.to(`.cover-${i}`, {
+          yPercent: 0,
           duration: 2,
-          ease: "power2.inOut",
         })
-        .to(`.cover-${i} .${s.imageWrapper}:nth-child(2) .${s.reveal}`, {
-          xPercent: 100,
-          duration: 2,
-          ease: "power2.inOut",
-        }, "-=0.5");
-
-        tl.to(`.cover-${i + 1}`, { yPercent: 0, duration: 2 }).to(
-          ".title span",
-          { text: title },
-          
-        )
-
-
-
+          .to(`.heading-${i}`, {
+            clipPath: "inset(0% 0% 0% 0%)",
+            ease: "power2.inOut",
+          })
+          .to(`.imageWrapper-1-${i}`, {
+            clipPath: "inset(0% 0% 0% 0%)",
+            ease: "power2.inOut",
+            duration: 1,
+          })
+          .to(`.imageWrapper-2-${i}`, {
+            clipPath: "inset(0% 0% 0% 0%)",
+            ease: "power2.inOut",
+            duration: 1,
+            delay: 0.3,
+          })
+          .to(".title span", {
+            text: nextTitle,
+          });
       });
     },
     { scope: container }
@@ -115,7 +111,6 @@ const KoreanServices = () => {
                 <div className={s.koreansection_cover_box}>
                   <div className={s.koreansection_cover_cardHead}>
                     <h3 className={`heading-${i} ${s.heading}`}>
-                      <div className={s.reveal}></div>
                       <span>{heading}</span>
                     </h3>
                     <TopLeftArrow />
@@ -132,8 +127,7 @@ const KoreanServices = () => {
                   </div>
 
                   <div className={s.koreansection_cover_cardBody}>
-                    <div className={s.imageWrapper}>
-                      <div className={s.reveal}></div>
+                    <div className={`imageWrapper-1-${i} ${s.imageWrapper}`}>
                       <Image
                         src={imageOne}
                         alt="img"
@@ -142,8 +136,9 @@ const KoreanServices = () => {
                       />
                     </div>
 
-                    <div className={`${s.imageWrapper} ${s.imageWrapperTwo}`}>
-                      <div className={s.reveal}></div>
+                    <div
+                      className={`imageWrapper-2-${i} ${s.imageWrapper} ${s.imageWrapperTwo}`}
+                    >
                       <Image
                         src={imageTwo}
                         alt="img"
@@ -151,7 +146,6 @@ const KoreanServices = () => {
                         width={1920}
                       />
                     </div>
-                    
                   </div>
                 </div>
               </div>

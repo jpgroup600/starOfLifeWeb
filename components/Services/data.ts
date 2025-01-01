@@ -78,6 +78,7 @@ export const koreanData = [
   {
     menu: ["검색광고", "배너광고", "SNS 광고", "유튜브 광고", "브랜딩"],
     title: "Marketing",
+    nextTitle: "Manufacturing",
     heading:
       "좋은 상품이 있으시지만 마케팅이 부족하신가요? 저희를 통해 배 성장을 체험해보세요",
     imageOne: "/services/1.jpg",
@@ -86,6 +87,7 @@ export const koreanData = [
   {
     menu: ["검색광고", "배너광고", "SNS 광고", "유튜브 광고", "브랜딩"],
     title: "Manufacturing",
+    nextTitle: "Packaging",
     heading:
       "좋은 상품이 있으시지만 마케팅이 부족하신가요? 저희를 통해 배 성장을 체험해보세요",
     imageOne: "/services/1.jpg",
@@ -94,6 +96,7 @@ export const koreanData = [
   {
     menu: ["검색광고", "배너광고", "SNS 광고", "유튜브 광고", "브랜딩"],
     title: "Packaging",
+    nextTitle: "Packaging",
     heading:
       "좋은 상품이 있으시지만 마케팅이 부족하신가요? 저희를 통해 배 성장을 체험해보세요",
     imageOne: "/services/1.jpg",
