@@ -1,6 +1,6 @@
 import s from "./services.module.scss";
 import { ServicesHeading } from "../Svg/Svg";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
@@ -10,6 +10,7 @@ import { koreanData } from "./data";
 
 const KoreanServices = () => {
   const container = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useGSAP(
     () => {
@@ -80,6 +81,15 @@ const KoreanServices = () => {
     { scope: container }
   );
 
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(error => {
+        console.log("Video autoplay failed:", error);
+      });
+    }
+  }, []);
+  
+
   return (
     <section id="services" ref={container} className={s.main}>
       <div className={`services-heading ${s.heading}`}>
@@ -91,7 +101,7 @@ const KoreanServices = () => {
           <span>Marketing</span>
         </h2>
         <div className={s.koreansection_relative}>
-          {koreanData.map(({ heading, imageOne, imageTwo, menu }, i) => {
+          {koreanData.map(({ heading, imageOne, imageTwo, menu,isVideo }, i) => {
             return (
               <div
                 style={{ zIndex: i }}
@@ -130,12 +140,25 @@ const KoreanServices = () => {
 
                   <div className={s.koreansection_cover_cardBody}>
                     <div className={`imageWrapper-1-${i} ${s.imageWrapper}`}>
-                      <Image
-                        src={imageOne}
-                        alt="img"
-                        height={1080}
-                        width={1920}
-                      />
+                      {isVideo ? (
+                        <video
+                          ref={videoRef}
+                          src={`/archive-videos/1.mp4`}
+                          autoPlay={true}
+                          muted={true}
+                          loop={true}
+                          playsInline={true}
+                          preload="auto"
+                          webkit-playsinline="true"
+                        ></video>
+                      ) : (
+                        <Image
+                          src={imageOne}
+                          alt="img"
+                          height={1080}
+                          width={1920}
+                        />
+                      )}
                     </div>
 
                     <div
