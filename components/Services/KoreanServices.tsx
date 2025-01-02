@@ -143,7 +143,7 @@ const KoreanServices = () => {
                       {isVideo ? (
                         <video
                           ref={videoRef}
-                          src={`/archive-videos/1.mp4`}
+                          src={imageOne}
                           autoPlay={true}
                           muted={true}
                           loop={true}
@@ -164,12 +164,25 @@ const KoreanServices = () => {
                     <div
                       className={`imageWrapper-2-${i} ${s.imageWrapper} ${s.imageWrapperTwo}`}
                     >
-                      <Image
-                        src={imageTwo}
-                        alt="img"
-                        height={1080}
-                        width={1920}
-                      />
+                      {isVideo ? (
+                        <video
+                          ref={videoRef}
+                          src={imageTwo}
+                          autoPlay={true}
+                          muted={true}
+                          loop={true}
+                          playsInline={true}
+                          preload="auto"
+                          webkit-playsinline="true"
+                        ></video>
+                      ) : (
+                        <Image
+                          src={imageTwo}
+                          alt="img"
+                          height={1080}
+                          width={1920}
+                        />
+                      )}
                     </div>
                   </div>
                 </div>

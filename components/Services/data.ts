@@ -81,8 +81,8 @@ export const koreanData = [
     nextTitle: "Web & App",
     heading:
       "좋은 상품이 있으시지만 <br/>상품 알리는게 힘드신가요? 저희가 도와드릴게요",
-    imageOne: "/services/1.jpg",
-    imageTwo: "/services/0.jpg",
+    imageOne: "/services/mark1.png",
+    imageTwo: "/services/mark2.png",
     isVideo: false,
   },
   {
@@ -91,19 +91,19 @@ export const koreanData = [
     nextTitle: "Design & Video",
     heading:
       "좋은 아이디어가 있지만 구현해줄 팀이 <br/> 없으신가요?  이젠 저희가 구현해드릴게요",
-    imageOne: "/services/1.jpg",
-    imageTwo: "/services/0.jpg",
-    isVideo: false,
+    imageOne: "/services/dev1.mp4",
+    imageTwo: "/services/dev2.mp4",
+    isVideo: true,
   },
   {
     menu: ["제품 촬영", "상세페이지 제작", "영상 제작", "배너 제작"],
     title: "Design & Video",
     nextTitle: "Design & Video",
     heading:
-      "상품도 있고 마케팅도 있는데 <br/> 상품을 매력적이게 보여주고 싶으신가요? 저희가 도와드릴게요",
+      "상품도 있고 마케팅도 있는데 <br/> 상품을 매력적이게 보여주고 싶으신가요?<br/> 저희가 도와드릴게요",
     imageOne: "/services/1.jpg",
     imageTwo: "/services/0.jpg",
-    isVideo: true,
+    isVideo: false,
   },
  
   
