@@ -14,6 +14,7 @@ interface UserLeads {
   email: string;
   phone: string;
   name: string;
+  question: string;
 }
 
 
@@ -26,6 +27,7 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
+    question: "",
   });
 
   const handleSubmit = async () => {
@@ -127,6 +129,7 @@ const Contact = () => {
             <ContactInput label="담당자명" id="name" onchange={handleChange} value={userLeads.name} />
             <ContactInput label="이메일" id="email" onchange={handleChange} value={userLeads.email} />
             <ContactInput label="연락처" id="phone" onchange={handleChange} value={userLeads.phone} />
+            <ContactInput label="문의사항" id="question" onchange={handleChange} value={userLeads.question} />
             <button 
             className={s.submit}
             onClick={handleSubmit}

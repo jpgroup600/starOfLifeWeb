@@ -9,7 +9,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' })
   }
-  const { companyName, name, email, phone } = JSON.parse(req.body)
+  const { companyName, name, email, phone,question } = JSON.parse(req.body)
 
   try {
     const data = {
@@ -17,6 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       name,
       email,
       phone,
+      question,
       createdAt: new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })
     }
 

@@ -80,7 +80,7 @@ export const koreanData = [
     title: "Marketing",
     nextTitle: "Web & App",
     heading:
-      "좋은 상품이 있으시지만 <br/>상품 알리는게 힘드신가요? 저희가 도와드릴게요",
+      "좋은 상품이 있으시지만 <br/>상품 알리는게 힘드신가요? <br/>저희가 도와드릴게요",
     imageOne: "/services/mark1.png",
     imageTwo: "/services/mark2.png",
     isVideo: false,
@@ -105,6 +105,7 @@ export const koreanData = [
     imageTwo: "/services/0.jpg",
     isVideo: false,
   },
+  
  
   
 ];
