@@ -7,6 +7,8 @@ const Hero = () => {
         당신의
         <br />
         아이디어를
+        <br />
+        현실로
       </h2>
     </section>
   );

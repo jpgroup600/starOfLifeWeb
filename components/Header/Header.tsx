@@ -267,7 +267,7 @@ const Header = ({
       </div>
       <header ref={header} id="unknown-header" className={s.main}>
         <div ref={logo} className={`${s.logo} logo`} id="unknown-logo">
-          <Logo />
+          <Link href="/"><Logo /></Link>
           {/* <LottieHandle /> */}
         </div>
         <div className={s.menuBtn}>
@@ -308,9 +308,9 @@ const Header = ({
           {[
             { heading: "Work", color: "#ADDBD0" },
             { heading: "Archive", color: "#83D398" },
-            { heading: "Clients", color: "#C1927F" },
+            { heading: "Why Us", color: "#C1927F", url:"#clients" },
             { heading: "Services", color: "#FFD95D" },
-            { heading: "About", color: "#FF9293" },
+            { heading: "Portfolio", color: "#FF9293", url:"/work" },
             { heading: "Contact", color: "#D6C2E4" },
           ].map((e, i) => {
             return (
@@ -331,7 +331,7 @@ const Header = ({
                       scroll={false}
                       onClick={handleClick}
                       className="menu-link"
-                      href={`#${e.heading.toLowerCase()}`}
+                      href={e.url ? e.url : `#${e.heading.toLowerCase()}`}
                     >
                       {e.heading}
                       <span>0{i + 1}</span>

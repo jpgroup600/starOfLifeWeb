@@ -5,8 +5,18 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-const Footer = () => {
+
+type Props = {
+  handlePointerEnter: () => void;
+  handlePointerLeave: () => void;
+};
+
+const Footer: React.FC<Props> = ({
+  handlePointerEnter,
+  handlePointerLeave,
+}) => {
   const container = useRef<HTMLDivElement>(null);
+ 
 
   useGSAP(
     () => {
@@ -18,7 +28,6 @@ const Footer = () => {
             toggleActions: "play none none reverse",
             fastScrollEnd: true,
             preventOverlaps: true,
-           
           },
           defaults: {
             ease: "power4.inOut",
@@ -39,14 +48,20 @@ const Footer = () => {
   );
 
   return (
-    <footer ref={container} id="footer" className={s.main}>
+    <footer
+      onPointerEnter={handlePointerEnter}
+      onPointerLeave={handlePointerLeave}
+      ref={container}
+      id="footer"
+      className={s.main}
+    >
       <div className={`footer-star-2 ${s.star}`}>
         <Star />
       </div>
       <nav className={`footer-nav-1 ${s.nav}`}>
         <CustomLink href="/" text="Work" />
         <CustomLink href="/" text="Archive" />
-        <CustomLink href="/" text="Clients" />
+        <CustomLink href="/" text="Why Us" />
         <CustomLink href="/" text="Services" />
         <CustomLink href="/" text="About" />
         <CustomLink href="/" text="Contact" />

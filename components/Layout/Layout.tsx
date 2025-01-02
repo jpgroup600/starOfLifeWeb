@@ -3,6 +3,7 @@ import Header from "../Header/Header";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { store } from "@/store";
+import Footer from "../Footer/Footer";
 
 type Props = {
   children: React.ReactNode;
@@ -77,6 +78,19 @@ const Layout: React.FC<Props> = ({ children }) => {
     mouseHover.current?.reverse();
   });
 
+  const handleFooterEnter = () => {
+    gsap.timeline().to(".mouse", {
+      backgroundColor: "#ffffff",
+      "mix-blend-mode": "difference",
+    });
+  };
+
+  const handleFooterLeave = () => {
+    gsap
+      .timeline()
+      .to(".mouse", { backgroundColor: "#000000", "mix-blend-mode": "unset" });
+  };
+
   return (
     <main onMouseMove={moveMover} ref={container}>
       <div className="mouse">
@@ -87,6 +101,10 @@ const Layout: React.FC<Props> = ({ children }) => {
         menuBtnLeave={handlePointerLeave}
       />
       {children}
+      <Footer
+        handlePointerEnter={handleFooterEnter}
+        handlePointerLeave={handleFooterLeave}
+      />
     </main>
   );
 };

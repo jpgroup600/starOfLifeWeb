@@ -30,6 +30,7 @@ export const koreanData: Data[] = [
       "앱 기획/개발",
       "관리 프로그램",
       "브랜딩 페이지",
+      "AI 인공지능 개발",
     ],
     title: "Web & App",
     nextTitle: "Design & Video",
@@ -41,13 +42,13 @@ export const koreanData: Data[] = [
       </>
     ),
     mediaSrcOne: "/services/dev1.mp4",
-    mediaSrcTwo: "/services/dev1.mp4",
+    mediaSrcTwo: "/services/dev3.mov",
     isVideo: true,
   },
   {
     menu: ["제품 촬영", "상세페이지 제작", "영상 제작", "배너 제작"],
     title: "Design & Video",
-    nextTitle: "Design & Video",
+    nextTitle: "Operation",
     heading: (
       <>
         상품도 있고 마케팅도 있는데 <br /> 상품을 매력적이게 보여주고
@@ -55,8 +56,23 @@ export const koreanData: Data[] = [
         <br /> 저희가 도와드릴게요
       </>
     ),
-    mediaSrcOne: "/services/1.jpg",
-    mediaSrcTwo: "/services/0.jpg",
+    mediaSrcOne: "/services/vid1.mp4",
+    mediaSrcTwo: "/work/1-2.mp4",
+    isVideo: true,
+  },
+  {
+    menu: ["상품 관리", "자사몰", "오픈 마켓", "소셜커머스","검색광고","종합몰 / 폐쇄몰","종합 운영"],
+    title: "Operation",
+    nextTitle: "Operation",
+    heading: (
+      <>
+        상품도 있고 마케팅도 있는데 <br /> 상품을 매력적이게 보여주고
+        싶으신가요?
+        <br /> 저희가 도와드릴게요
+      </>
+    ),
+    mediaSrcOne: "/services/op3.png",
+    mediaSrcTwo: "/services/op1.png",
     isVideo: false,
   },
 ];

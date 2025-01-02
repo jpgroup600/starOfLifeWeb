@@ -27,10 +27,10 @@ export default function Home() {
       <Work />
       <KoreanArchive />
       <Archive />
-      <Client />
+      <Client /> 
+      {/* why us */}
       <KoreanServices />
       <Contact />
-      <Footer />
     </>
   );
 }

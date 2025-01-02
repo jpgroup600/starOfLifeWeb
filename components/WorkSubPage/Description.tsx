@@ -4,9 +4,8 @@ const Description = () => {
   return (
     <section className={s.container}>
       <h4 className={s.container_description}>
-        멋지고 고품질의 바우하우스 월페이퍼를 찾는 모든 사람을 위한 최고의
-        목적지인 korea에 오신 것을 환영합니다. 이 웹사이트는 매끄럽고 즐거운
-        쇼핑 경험을 제공하도록 설계되었습니다.
+        저희 와이즈 루트리는 웹 제작, 영상 제작, 오픈 마켓 운영, 소셜 커머스, 검색 광고, 종합 몰 / 폐쇄 몰, 종합 운영 등 다양한 서비스를 
+        따로 찾아볼 필요가 없도록 하나의 팀으로써 도와드립니다 
       </h4>
     </section>
   );
