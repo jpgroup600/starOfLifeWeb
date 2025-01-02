@@ -63,7 +63,7 @@ const Footer = () => {
         <CustomLink href="https://www.behance.net/Layani" text="Behance" />
       </div> */}
       <div className={s.foot}>
-        <p className="footer-foot">From Wise Rootree</p>
+        <p className="footer-foot">Copyright © Wise Rootree | 회사명 : 에이씨아이 | 대표자 : 김동석 | 사업자 번호 : 247-48-00896</p>
       </div>
     </footer>
   );
