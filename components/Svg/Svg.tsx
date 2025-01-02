@@ -1,9 +1,7 @@
-
-import { data } from "../Services/data";
+// import { data } from "../Services/data";
 import s from "./svg.module.scss";
 // import Lottie from "lottie-react";
-import LottieFiles from "@/public/logoLottie.json"
-
+import LottieFiles from "@/public/logoLottie.json";
 
 // export const LottieHandle = () => {
 //   return (
@@ -1691,30 +1689,30 @@ export const Decline = () => {
   );
 };
 
-export const ServiceMenu = () => {
-  return (
-    <svg viewBox="-10 0 520 500" xmlns="http://www.w3.org/2000/svg">
-      <path
-        id="curve"
-        d="M 0, 250 a 250,250 0 1,1 500,0 a 250,250 0 1,1 -500,0"
-      ></path>
-      <text style={{ color: "black" }} width="500">
-        <textPath xlinkHref="#curve">
-          {data.map((e, i) => {
-            return (
-              <>
-                <tspan>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </tspan>
-                <tspan>{e.heading}</tspan>
-              </>
-            );
-          })}
-        </textPath>
-      </text>
-    </svg>
-  );
-};
+// export const ServiceMenu = () => {
+//   return (
+//     <svg viewBox="-10 0 520 500" xmlns="http://www.w3.org/2000/svg">
+//       <path
+//         id="curve"
+//         d="M 0, 250 a 250,250 0 1,1 500,0 a 250,250 0 1,1 -500,0"
+//       ></path>
+//       <text style={{ color: "black" }} width="500">
+//         <textPath xlinkHref="#curve">
+//           {data.map((e, i) => {
+//             return (
+//               <>
+//                 <tspan>
+//                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//                 </tspan>
+//                 <tspan>{e.heading}</tspan>
+//               </>
+//             );
+//           })}
+//         </textPath>
+//       </text>
+//     </svg>
+//   );
+// };
 
 export const ServicePathSeven = () => {
   return (
@@ -1970,7 +1968,7 @@ export const HeroArrowDown = () => {
         d="M32.7469 23.4116L17.9657 37.353C17.7137 37.605 17.3778 37.689 17.1259 37.689C16.7899 37.689 16.454 37.605 16.202 37.353L1.42077 23.4116C0.832882 22.9077 0.832882 22.0679 1.33679 21.48C1.84069 20.8921 2.68054 20.8921 3.18444 21.396L15.7821 33.1538V1.4917C15.7821 0.73584 16.37 0.0639648 17.0419 0.0639648C17.7137 0.0639648 18.4696 0.73584 18.4696 1.4917V33.1538L30.9833 21.396C31.4872 20.8921 32.327 20.8921 32.8309 21.48C33.3348 22.0679 33.3348 22.9077 32.7469 23.4116Z"
         fill="none"
         stroke="black"
-      stroke-width="1"
+        stroke-width="1"
       />
     </svg>
   );

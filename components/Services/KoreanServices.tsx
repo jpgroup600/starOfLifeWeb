@@ -1,6 +1,6 @@
 import s from "./services.module.scss";
 import { ServicesHeading } from "../Svg/Svg";
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
@@ -10,7 +10,6 @@ import { koreanData } from "./data";
 
 const KoreanServices = () => {
   const container = useRef<HTMLElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
 
   useGSAP(
     () => {
@@ -40,13 +39,14 @@ const KoreanServices = () => {
           ease: "power3",
         });
 
-      gsap.set(".cover-1", { yPercent: 150 });
-      gsap.set(".cover-2", { yPercent: 150 });
+      koreanData.map((e, i) => {
+        gsap.set(`.cover-${i}`, { yPercent: 150 });
+      });
 
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".section",
-          end: "+=6000",
+          end: () => `+=${1500 * koreanData.length}`,
           pin: true,
           pinSpacing: true,
           scrub: 2,
@@ -81,15 +81,6 @@ const KoreanServices = () => {
     { scope: container }
   );
 
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(error => {
-        console.log("Video autoplay failed:", error);
-      });
-    }
-  }, []);
-  
-
   return (
     <section id="services" ref={container} className={s.main}>
       <div className={`services-heading ${s.heading}`}>
@@ -101,33 +92,15 @@ const KoreanServices = () => {
           <span>Marketing</span>
         </h2>
         <div className={s.koreansection_relative}>
-          {koreanData.map(({ heading, imageOne, imageTwo, menu,isVideo }, i) => {
-            return (
-              <div
-                style={{ zIndex: i }}
-                key={i}
-                className={`cover-${i} ${s.koreansection_cover}`}
-              >
-                <div className={s.koreansection_cover_list}>
-                  {menu.map((e, i) => {
-                    return (
-                      <h4 key={i}>
-                        <span></span>
-                        {e}
-                      </h4>
-                    );
-                  })}
-                </div>
-                <div className={s.koreansection_cover_box}>
-                  <div className={s.koreansection_cover_cardHead}>
-                    <h3 className={`heading-${i} ${s.heading}`}>
-                      <span
-                      dangerouslySetInnerHTML={{__html: heading}}
-                      ></span>
-                    </h3>
-                    <TopLeftArrow />
-                  </div>
-                  <div className={s.koreansection_cover_cardMid}>
+          {koreanData.map(
+            ({ heading, menu, isVideo, mediaSrcOne, mediaSrcTwo }, i) => {
+              return (
+                <div
+                  style={{ zIndex: i }}
+                  key={i}
+                  className={`cover-${i} ${s.koreansection_cover}`}
+                >
+                  <div className={s.koreansection_cover_list}>
                     {menu.map((e, i) => {
                       return (
                         <h4 key={i}>
@@ -137,58 +110,75 @@ const KoreanServices = () => {
                       );
                     })}
                   </div>
-
-                  <div className={s.koreansection_cover_cardBody}>
-                    <div className={`imageWrapper-1-${i} ${s.imageWrapper}`}>
-                      {isVideo ? (
-                        <video
-                          ref={videoRef}
-                          src={imageOne}
-                          autoPlay={true}
-                          muted={true}
-                          loop={true}
-                          playsInline={true}
-                          preload="auto"
-                          webkit-playsinline="true"
-                        ></video>
-                      ) : (
-                        <Image
-                          src={imageOne}
-                          alt="img"
-                          height={1080}
-                          width={1920}
-                        />
-                      )}
+                  <div className={s.koreansection_cover_box}>
+                    <div className={s.koreansection_cover_cardHead}>
+                      <h3 className={`heading-${i} ${s.heading}`}>{heading}</h3>
+                      <TopLeftArrow />
+                    </div>
+                    <div className={s.koreansection_cover_cardMid}>
+                      {menu.map((e, i) => {
+                        return (
+                          <h4 key={i}>
+                            <span></span>
+                            {e}
+                          </h4>
+                        );
+                      })}
                     </div>
 
-                    <div
-                      className={`imageWrapper-2-${i} ${s.imageWrapper} ${s.imageWrapperTwo}`}
-                    >
-                      {isVideo ? (
-                        <video
-                          ref={videoRef}
-                          src={imageTwo}
-                          autoPlay={true}
-                          muted={true}
-                          loop={true}
-                          playsInline={true}
-                          preload="auto"
-                          webkit-playsinline="true"
-                        ></video>
-                      ) : (
-                        <Image
-                          src={imageTwo}
-                          alt="img"
-                          height={1080}
-                          width={1920}
-                        />
-                      )}
+                    <div className={s.koreansection_cover_cardBody}>
+                      <div
+                        className={`imageWrapper-1-${i} ${
+                          isVideo ? s.videoWrapper : s.imageWrapper
+                        }`}
+                      >
+                        {isVideo ? (
+                          <video
+                            src={mediaSrcOne}
+                            autoPlay
+                            playsInline
+                            loop
+                            muted
+                          />
+                        ) : (
+                          <Image
+                            src={mediaSrcOne}
+                            alt="img"
+                            height={1080}
+                            width={1920}
+                          />
+                        )}
+                      </div>
+
+                      <div
+                        data-small
+                        className={`imageWrapper-2-${i} ${
+                          isVideo ? s.videoWrapper : s.imageWrapper
+                        } `}
+                      >
+                        {isVideo ? (
+                          <video
+                            src={mediaSrcTwo}
+                            autoPlay
+                            playsInline
+                            loop
+                            muted
+                          />
+                        ) : (
+                          <Image
+                            src={mediaSrcTwo}
+                            alt="img"
+                            height={1080}
+                            width={1920}
+                          />
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            }
+          )}
         </div>
       </div>
     </section>
