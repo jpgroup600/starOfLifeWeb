@@ -96,16 +96,18 @@ const KoreanArchive = () => {
         <div className={`box-1 ${s.koreanContent_box}`}>
           <Image fill src="/korean-archive/marketing.jpg" alt="img" />
           <h2>Marketing</h2>
-          <p>
-            대기업 프로젝트를 운영하는 마케터가 여러분의 파트너가
+          <p className={s.koreanContent_box_p}>믿을만한 마케터가 필요하신가요?</p>
+          <p className={s.koreanContent_box_smallp}>
+            대기업 프로젝트를 운영하는 마케터가 여러분의 파트너가<br></br>
             되어드리겠습니다
           </p>
         </div>
         <div className={`box-2 ${s.koreanContent_box}`}>
           <Image fill src="/korean-archive/programming.jpg" alt="img" />
           <h2>Programing</h2>
-          <p>
-            글로벌 기업 프로젝트를 진행한 개발자가 여러분의 파트너가
+          <p className={s.koreanContent_box_p}>믿을만한 개발자가 필요하신가요?</p>
+          <p className={s.koreanContent_box_smallp}>
+            글로벌 기업 프로젝트를 진행한 개발자가 여러분의 파트너가 <br></br>
             되어드리겠습니다
           </p>
         </div>

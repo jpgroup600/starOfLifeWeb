@@ -30,8 +30,8 @@
     }
     @include lg {
       font-size: 15.625rem;
-      line-height: calc(15.625rem / 2);
-      margin-top: calc(15.625rem / 2);
+      line-height: calc(15.625rem * 1.5);
+      margin-top: calc(15.625rem * 1.5);
     }
     @include xxl {
       margin-top: 10.937rem;
@@ -44,6 +44,7 @@
 
 .heading {
   margin-inline: auto;
+
   
   @include lg {
     margin-bottom: 100px;
@@ -193,7 +194,7 @@
     font-size: 4rem;
     
     @include lg {
-      font-size: 7vw;
+      font-size: 10vw;
       letter-spacing: 0.1vw;
     }
   }

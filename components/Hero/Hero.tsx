@@ -103,19 +103,22 @@ const Hero = () => {
   );
 
   const text =
-    "아이템과 아이디어만 가져오세요\n실행과 운영은 저희가 해드릴게요";
+    "아이템과 아이디어는 있으신데 <br/> 함께 실행할 파트너는 없으신가요?";
 
   const para =
-    "아이디어 구현에 필요한 구축 부터 운영까지 모든것을 제공해드립니다";
+    "필요한 기획, 실행, 운영까지 대행사가 아닌 \n아이디어를 실행할 파트너가 되어드리겠습니다";
 
-  const wrapTextInSpan = (str: string) => {
-    return str.split("").map((char, index) => {
-      if (char === "\n") {
-        return <br key={index} />;
-      }
-      return <span key={index}>{char}</span>;
-    });
-  };
+    const wrapTextInSpan = (str: string) => {
+      return str.split("").map((char, index) => {
+        if (char === "\n") {
+          return <br key={index} />;
+        }
+        if (char === " ") {
+          return <span key={index}>&nbsp;</span>;
+        }
+        return <span key={index}>{char}</span>;
+      });
+    };
 
   return (
     <section ref={container} id="hero" className={s.main}>
@@ -128,8 +131,11 @@ const Hero = () => {
       </div>
 
       <div className={s.content}>
-        <h2 className={`${s.heading} heading`}>{wrapTextInSpan(text)}</h2>
-        <p className="para">{wrapTextInSpan(para)}</p>
+        <h2 className={`${s.heading} heading`}
+        dangerouslySetInnerHTML={{ __html: text }}
+        >
+        </h2>
+        <p className={`${s.para} para`}>{wrapTextInSpan(para)}</p>
       </div>
     </section>
   );

@@ -106,15 +106,18 @@ const Contact = () => {
         <ContactHeading />
       </div>
       <div className={`contact-grid ${s.grid}`}>
+        <p>당신의 아이디어를 현실로!</p>
         <h4>
-          진정한 올인원 솔루션
-          <br />
-          원하시는 솔루션을 말해주세요
+        당신의 대행사가 아닌 <br></br>파트너가 되어드리겠습니다 
+        <br></br>
+        <br></br>
+        어떤 도움이 필요하신가요?
           <span className={`contact-path-1 ${s.pathOne}`}>
             <ContactPathOne />
           </span>
         </h4>
-        <p>이제 사업 구축은 저희에게 맡기고 성장 전략에 집중하세요!</p>
+        <p>
+        </p>
       </div>
       <div className={s.form}
       >

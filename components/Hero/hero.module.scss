@@ -36,8 +36,10 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  align-items: center;
   @include lg {
     padding-left: 5%;
+    align-items: flex-start;
   }
   // h2 {
   //   font-size: 2rem;
@@ -66,7 +68,7 @@
   p {
     font-size: 1.2rem;
     line-height: calc(1.2rem * 1.5);
-    max-width: 600px;
+    max-width: 650px;
     text-align: center;
     font-family: Shilla-bold;
     span {
@@ -179,6 +181,7 @@
   }
 }
 
+
 .heading {
   font-size: 2rem;
   line-height: calc(2rem * 1.5);
@@ -186,6 +189,7 @@
   text-align: center;
   font-family: Shilla-bold;
   width: fit-content;
+  max-width: 300px;
   span:nth-child(odd) {
     opacity: 1;
     display: inline-block;
@@ -198,5 +202,8 @@
   @include lg {
     font-size: 4.28vw;
     line-height: calc(4.28vw * 1.5);
+    text-align: left;
+    max-width: 100%;
+    
   }
 }

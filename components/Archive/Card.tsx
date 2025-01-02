@@ -17,8 +17,8 @@ const Card: React.FC<Props> = ({
     <div
       data-varient={position}
       data-unknown={imgVarient}
-      className={`archive-card-${id} ${s.card} `}
-      style={newStyle ? { marginTop: newStyle } : {}}
+      className={`archive-card-${id} ${s.card} ${newStyle ? s[newStyle] : ''}`}
+      
     >
       <div
         style={{ backgroundImage: `url(/archive-frame/${imgVarient}.png)` }}

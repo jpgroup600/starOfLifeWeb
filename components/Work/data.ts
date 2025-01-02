@@ -50,7 +50,7 @@ export const data: Data[] = [
     ],
   },
   {
-    name: "<span class=small-stroke>효과적으로 <br> 연결하는 제안을 드립니다</span>",
+    name: "<span class=small-stroke>효과적으로 <br> 알리고 싶으신가요?</span>",
     desc: [
       "Contenu Editorial",
       "Direction de production",

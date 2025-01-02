@@ -111,7 +111,9 @@ const KoreanServices = () => {
                 <div className={s.koreansection_cover_box}>
                   <div className={s.koreansection_cover_cardHead}>
                     <h3 className={`heading-${i} ${s.heading}`}>
-                      <span>{heading}</span>
+                      <span
+                      dangerouslySetInnerHTML={{__html: heading}}
+                      ></span>
                     </h3>
                     <TopLeftArrow />
                   </div>

@@ -144,7 +144,8 @@ const Client = () => {
       {/* <Elements /> */}
       <Shape />
       <div className={`client-heading ${s.heading}`}>
-        <ClientsHeading />
+        {/* <ClientsHeading /> */}
+        <h1>Why us?</h1>
       </div>
       <div className={s.grid}>
         {/* <div className={`client-grid ${s.grid_logos}`}>

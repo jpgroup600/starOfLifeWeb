@@ -78,28 +78,38 @@ export const koreanData = [
   {
     menu: ["검색광고", "배너광고", "SNS 광고", "유튜브 광고", "브랜딩"],
     title: "Marketing",
-    nextTitle: "Manufacturing",
+    nextTitle: "Web & App",
     heading:
-      "좋은 상품이 있으시지만 마케팅이 부족하신가요? 저희를 통해 배 성장을 체험해보세요",
+      "좋은 상품이 있으시지만 <br/>상품 알리는게 힘드신가요? 저희가 도와드릴게요",
     imageOne: "/services/1.jpg",
     imageTwo: "/services/0.jpg",
   },
   {
-    menu: ["검색광고", "배너광고", "SNS 광고", "유튜브 광고", "브랜딩"],
-    title: "Manufacturing",
-    nextTitle: "Packaging",
+    menu: ["맞춤형 프로그램 개발", "앱 기획/개발", "관리 프로그램", "브랜딩 페이지"],
+    title: "Web & App",
+    nextTitle: "Design & Video",
     heading:
-      "좋은 상품이 있으시지만 마케팅이 부족하신가요? 저희를 통해 배 성장을 체험해보세요",
+      "좋은 아이디어가 있지만 구현해줄 팀이 <br/> 없으신가요?  이젠 저희가 구현해드릴게요",
     imageOne: "/services/1.jpg",
     imageTwo: "/services/0.jpg",
   },
   {
-    menu: ["검색광고", "배너광고", "SNS 광고", "유튜브 광고", "브랜딩"],
-    title: "Packaging",
-    nextTitle: "Packaging",
+    menu: ["제품 촬영", "상세페이지 제작", "영상 제작", "배너 제작"],
+    title: "Design & Video",
+    nextTitle: "Operation",
     heading:
-      "좋은 상품이 있으시지만 마케팅이 부족하신가요? 저희를 통해 배 성장을 체험해보세요",
+      "상품도 있고 마케팅도 있는데 <br/> 상품을 매력적이게 보여주고 싶으신가요? 저희가 도와드릴게요",
     imageOne: "/services/1.jpg",
     imageTwo: "/services/0.jpg",
   },
+  {
+    menu: ["상품관리", "자사몰", "오픈마켓", "소셜커머스", "검색광고", "종합몰 & 폐쇄몰","종합운영"],
+    title: "Operation",
+    nextTitle: "Operation",
+    heading:
+      "모든게 준비되었지만 이것을 운영할 팀이 없으신가요? <br/> 저희가 도와드릴게요",
+    imageOne: "/services/1.jpg",
+    imageTwo: "/services/0.jpg",
+  },
+  
 ];

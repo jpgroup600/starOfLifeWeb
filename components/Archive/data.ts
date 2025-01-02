@@ -44,7 +44,7 @@ export const data: Data[] = [
     position: "normal",
     lessPad: true,
     video: "/archive-videos/2.mov",
-    newStyle:'70px'
+    newStyle:'newStyle'
   },
 
   {
@@ -69,6 +69,6 @@ export const data: Data[] = [
     position: "normal",
     lessPad: true,
     video: "/archive-videos/4.mov",
-    newStyle : "-150px"
+    newStyle : "styleTwo"
   },
 ];
