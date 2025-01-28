@@ -487,9 +487,10 @@
     top: 0%;
     left: 0%;
 
+
     .koreanContent_box_p {
-      font-size: 2.6rem;
-      line-height: calc(2.6rem * 1.5);
+      font-size: 2.4rem;
+      line-height: calc(2.4rem * 1.5);
       font-weight: 700;
     }
 
@@ -514,7 +515,7 @@
       position: relative;
       z-index: 1;
       text-align: center;
-      font-size: 5rem;
+      font-size: 4rem;
       line-height: calc(5rem * 1.2);
       @include lg {
         font-size: 6vw;

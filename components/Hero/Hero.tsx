@@ -106,7 +106,7 @@ const Hero = () => {
     "아이템과 아이디어는 있으신데 <br/> 함께 실행할 파트너는 없으신가요?";
 
   const para =
-    "필요한 기획, 실행, 운영까지 대행사가 아닌 \n아이디어를 실행할 파트너가 되어드리겠습니다";
+    "대행사가 아닌 아이디어를 실행할 \n파트너가 되어드리겠습니다";
 
     const wrapTextInSpan = (str: string) => {
       return str.split("").map((char, index) => {

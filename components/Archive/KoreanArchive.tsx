@@ -80,7 +80,7 @@ const KoreanArchive = () => {
           })
           .to(".content", { scale: 0,duration:8 })
           .to(".box-1", { xPercent: 0, duration:4 })
-          .to(".box-2", { xPercent: 0, duration:16 })
+          .to(".box-2", { xPercent: 0, duration:8 })
           
       });
     },
@@ -104,7 +104,7 @@ const KoreanArchive = () => {
         </div>
         <div className={`box-2 ${s.koreanContent_box}`}>
           <Image fill src="/korean-archive/programming.jpg" alt="img" />
-          <h2>Programing</h2>
+          <h2>Programming</h2>
           <p className={s.koreanContent_box_p}>믿을만한 개발자가 필요하신가요?</p>
           <p className={s.koreanContent_box_smallp}>
             글로벌 기업 프로젝트를 진행한 개발자가 여러분의 파트너가 <br></br>

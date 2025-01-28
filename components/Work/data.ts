@@ -8,7 +8,7 @@ type Data = {
 
 export const data: Data[] = [
   {
-    name: "당신의 <br> 아이디어를",
+    name: "당신의 <br> 아이디어를 <br> 알려주세요",
     link:"test.html",
     desc: [
       "design product",
@@ -26,7 +26,7 @@ export const data: Data[] = [
     ],
   },
   {
-    name: "빠르게",
+    name: "컨설팅 부터 <br> 실행까지",
     desc: [
       "Identité de marque",
       "Direction artistique",
@@ -41,7 +41,7 @@ export const data: Data[] = [
     ],
   },
   {
-    name: "많은 사람들에게",
+    name: "한번에 <br> 해결할 팀이<br> 되겠습니다",
     desc: ["Direction artistique", "Identité de marque", "print / digital"],
     color: "#fff4ce",
     media: [
@@ -49,20 +49,20 @@ export const data: Data[] = [
       { url: "/work/3-1.mp4", isVideo: true },
     ],
   },
-  {
-    name: "<span class=small-stroke>효과적으로 <br> 알리고 싶으신가요?</span>",
-    desc: [
-      "Contenu Editorial",
-      "Direction de production",
-      "Identité de marque",
-      "print / digital",
-    ],
-    color: "#daf2e0",
-    media: [
-      { url: "/work/4.mov", isVideo: true },
-      { url: "/work/4-2.mp4", isVideo: true },
-    ],
-  },
+  // {
+  //   name: "<span class=small-stroke>효과적으로 <br> 알리고 싶으신가요?</span>",
+  //   desc: [
+  //     "Contenu Editorial",
+  //     "Direction de production",
+  //     "Identité de marque",
+  //     "print / digital",
+  //   ],
+  //   color: "#daf2e0",
+  //   media: [
+  //     { url: "/work/4.mov", isVideo: true },
+  //     { url: "/work/4-2.mp4", isVideo: true },
+  //   ],
+  // },
   // {
   //   name: "Everphone",
   //   desc: ["Identité de marque", "Shooting photo"],

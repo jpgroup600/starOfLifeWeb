@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Autoplay, EffectFade, Navigation } from "swiper/modules";
 import { useEffect, useRef, useState } from "react";
 import SW from "swiper";
+import {data} from "./data";
 
 // Import Swiper styles
 import "swiper/css";
@@ -16,7 +17,7 @@ const Slider = () => {
   const container = useRef<HTMLElement>(null);
   const swiperRef = useRef<SW>();
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  const data = ["Graffiti", "ArtStyle", "Awesome"];
+  // const data = ["Graffiti", "ArtStyle", "Awesome"];
   const [width, setWidth] = useState<number>(0);
 
   useEffect(() => {
@@ -71,7 +72,7 @@ const Slider = () => {
               return (
                 <SwiperSlide key={i}>
                   <Image
-                    src={`/subwork/${i}.jpg`}
+                    src={`/menu/${i}.jpeg`}
                     alt="fake-img"
                     height={1080}
                     width={1920}
@@ -86,14 +87,14 @@ const Slider = () => {
                 ? data.map((e, i) => {
                     return (
                       <h2 key={i} data-active={i === activeIndex}>
-                        {e}
+                        {e.title}
                       </h2>
                     );
                   })
-                : ["", ...data].map((e, i) => {
+                : [{title:""}, ...data].map((e, i) => {
                     return (
                       <h2 key={i} data-active={i === activeIndex + 1}>
-                        {e}
+                        {e.title}
                       </h2>
                     );
                   })}

@@ -10,7 +10,7 @@ type Data = {
 
 export const koreanData: Data[] = [
   {
-    menu: ["검색광고", "배너광고", "SNS 광고", "유튜브 광고", "브랜딩"],
+    menu: ["파워링크", "카카오 광고", "인스타그램 광고", "유튜브 광고", "브랜딩 기획"],
     title: "Marketing",
     nextTitle: "Web & App",
     heading: (
@@ -32,7 +32,7 @@ export const koreanData: Data[] = [
       "브랜딩 페이지",
       "AI 인공지능 개발",
     ],
-    title: "Web & App",
+    title: "App & Web ",
     nextTitle: "Design & Video",
     heading: (
       <>
@@ -61,7 +61,7 @@ export const koreanData: Data[] = [
     isVideo: true,
   },
   {
-    menu: ["상품 관리", "자사몰", "오픈 마켓", "소셜커머스","검색광고","종합몰 / 폐쇄몰","종합 운영"],
+    menu: ["상품 관리", "자사몰 관리", "유튜브 쇼핑몰", "아마존","파워링크","종합몰 / 폐쇄몰","인스타 판매"],
     title: "Operation",
     nextTitle: "Operation",
     heading: (
