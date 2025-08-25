@@ -107,7 +107,7 @@ const Work = () => {
     <section id="work" ref={container} className={s.main}>
       <div className={`work-heading ${s.heading}`}>
         {/* <WorkHeading /> */}
-        <h1>What we do</h1>
+        {/* <h1>What we do</h1> */}
       </div>
 
       <div className={`slider ${s.slider}`}>

@@ -105,9 +105,12 @@ const Contact = () => {
   return (
     <section ref={container} id="contact" className={s.main}>
       <div className={`contact-heading ${s.heading}`}>
+      <a href="tel:01089633528" className={s.contact}>
         <ContactHeading />
-      </div>
-      <div className={`contact-grid ${s.grid}`}>
+        <p>연락하기</p>
+      </a>
+        </div>
+      {/* <div className={`contact-grid ${s.grid}`}>
         <p>당신의 아이디어를 현실로!</p>
         <h4>
         당신의 대행사가 아닌 <br></br>파트너가 되어드리겠습니다 
@@ -138,7 +141,7 @@ const Contact = () => {
           </div>
 
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

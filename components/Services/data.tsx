@@ -1,78 +1,143 @@
+import s from "./services.module.scss";
+
 type Data = {
   menu: string[];
   title: string;
   nextTitle: string;
   heading: JSX.Element;
   mediaSrcOne: string;
-  mediaSrcTwo: string;
+  mediaSrcTwo?: string;
   isVideo: boolean;
 };
 
 export const koreanData: Data[] = [
   {
-    menu: ["파워링크", "카카오 광고", "인스타그램 광고", "유튜브 광고", "브랜딩 기획"],
-    title: "Marketing",
-    nextTitle: "Web & App",
+    menu: ["광고 마케팅", "컨텐츠 마케팅", "퍼포먼스 마케팅"],
+    title: "Furniture",
+    nextTitle: "Sports Gear",
     heading: (
       <>
-        좋은 상품이 있으시지만 <br />
-        상품 알리는게 힘드신가요? <br />
-        저희가 도와드릴게요
+        하고싶은 말은 다 내려놓고<br /> 듣고싶어하는 말을 들려줍니다
+        <span className={s.result}>Result / 매출 1300% 증가</span>
       </>
     ),
-    mediaSrcOne: "/services/mark1.png",
-    mediaSrcTwo: "/services/mark2.png",
+    mediaSrcOne: "/service2/service1-1.png",
+    isVideo: false,
+  },
+  {
+    menu: ["광고 마케팅","컨텐츠 마케팅","퍼포먼스 마케팅"],
+    title: "Sports Gear",
+    nextTitle: "IT Service",
+    heading: (
+      <>
+        질문을 제대로해야 <br/> 답이 '제대로' 나옵니다
+        <span className={s.result}>Result / 매출 1300% 증가</span>
+      </>
+    ),
+    mediaSrcOne: "/service2/service2-1.png",
+    mediaSrcTwo: "/service2/service2-2.webp",
     isVideo: false,
   },
   {
     menu: [
-      "맞춤형 프로그램 개발",
-      "앱 기획/개발",
-      "관리 프로그램",
-      "브랜딩 페이지",
-      "AI 인공지능 개발",
+      "광고 마케팅",
+      "컨텐츠 마케팅",
+      "퍼포먼스 마케팅",
     ],
-    title: "App & Web ",
-    nextTitle: "Design & Video",
+    title: "IT Service",
+    nextTitle: "Education",
     heading: (
       <>
-        좋은 아이디어가 있지만 구현해줄 팀이 <br /> 없으신가요? 이젠 저희가
-        <br />
-        구현해드릴게요
+        브랜드네임으로 ‘WattEver’ 어떨까요?  <br /> 무엇이든지(What ever)가능한전기차IT <br></br>서비스 이름으로 좋을 것 같습니다
+        <span className={s.result}>브랜드 네이밍부터 브랜드 필름까지</span>
       </>
     ),
-    mediaSrcOne: "/services/dev1.mp4",
-    mediaSrcTwo: "/services/dev3.mov",
-    isVideo: true,
+    mediaSrcOne: "/service2/service3-1.png",
+    mediaSrcTwo: "/service2/service3-2.png",
+    isVideo: false,
+  },
+ 
+  {
+    menu: ["광고 마케팅", "컨텐츠 마케팅", "퍼포먼스 마케팅"],
+    title: "Education",
+    nextTitle: "Fashion",
+    heading: (
+      <>
+        학생의 목소리 100% 로 <br></br> '진정성'있는 마케팅이 필요합니다
+        <span className={s.result}>Result / ROI 270% 달성</span>
+      </>
+    ),
+    mediaSrcOne: "/service2/service4-1.png",
+    mediaSrcTwo: "/service2/service4-2.png",
+    isVideo: false,
   },
   {
-    menu: ["제품 촬영", "상세페이지 제작", "영상 제작", "배너 제작"],
-    title: "Design & Video",
+    menu: ["광고 마케팅", "컨텐츠 마케팅", "퍼포먼스 마케팅"],
+    title: "Fashion",
     nextTitle: "Operation",
     heading: (
       <>
-        상품도 있고 마케팅도 있는데 <br /> 상품을 매력적이게 보여주고
-        싶으신가요?
-        <br /> 저희가 도와드릴게요
+        선망성은 넘사벽이 아니라 <br></br> 친숙함과 솔직함에서 옵니다
+        <span className={s.result}>Result / 팔로워 600% 증가</span>
       </>
     ),
-    mediaSrcOne: "/services/vid1.mp4",
-    mediaSrcTwo: "/work/1-2.mp4",
-    isVideo: true,
+    mediaSrcOne: "/service2/service5-2.png",
+    mediaSrcTwo: "/service2/service5-1.png",
+    isVideo: false,
   },
   {
-    menu: ["상품 관리", "자사몰 관리", "유튜브 쇼핑몰", "아마존","파워링크","종합몰 / 폐쇄몰","인스타 판매"],
-    title: "Operation",
-    nextTitle: "Operation",
+    menu: ["광고 마케팅", "컨텐츠 마케팅", "퍼포먼스 마케팅"],
+    title: "Fashion",
+    nextTitle: "SNS",
     heading: (
       <>
-        상품도 있고 마케팅도 있는데 <br /> 상품을 매력적이게 보여주고
-        싶으신가요?
-        <br /> 저희가 도와드릴게요
+        일관성 있게 <br></br> 타이밍 놓치지 않고, <br></br> 꾸준한 퀄리티로
+        <span className={s.result}>Result / 팔로워 200% 증가</span>
       </>
     ),
-    mediaSrcOne: "/services/op3.png",
-    mediaSrcTwo: "/services/op1.png",
+    mediaSrcOne: "/service2/service6-1.png",
+    isVideo: false,
+  },
+  {
+    menu: ["광고 마케팅", "컨텐츠 마케팅", "퍼포먼스 마케팅"],
+    title: "SNS",
+    nextTitle: "Youtube Brand",
+    heading: (
+      <>
+        강남주부를 공략! <br></br> Pin Point 타겟팅으로 <br></br> 고가 전략을 완성
+        <span className={s.result}>Result / 팔로워 800%증가, 매출 42%상승</span>
+      </>
+    ),
+    mediaSrcOne: "/service2/service7-2.jpeg",
+    // mediaSrcTwo: "/service2/service7-2.jpeg",
+    isVideo: false,
+  },
+  {
+    menu: ["광고 마케팅", "컨텐츠 마케팅", "퍼포먼스 마케팅"],
+    title: "Youtube Brand",
+    nextTitle: "Youtube Contents",
+    heading: (
+      <>
+        풀집공예박물관의 컨텐츠를<br></br> 소비자가 보게 만들려면 <br></br> 어떻게해야합니까?
+        <span className={s.result}>Result / 팔로워 1300% 증가 , 평균 조회수 1.8만 달성</span>
+      </>
+    ),
+    mediaSrcOne: "/service2/service8-2.png",
+    mediaSrcTwo: "/service2/service8-1.png",
+    isVideo: false,
+  },
+  {
+    menu: ["광고 마케팅", "컨텐츠 마케팅", "퍼포먼스 마케팅"],
+    title: "Youtube Contents",
+    nextTitle: "Youtube Contents",
+    heading: (
+      <>
+        흔들리지 않는 컨셉이란<br></br> 절제의 미학에서 나온다고 하더군요
+        <span className={s.result}>Result / 조회수 600% 증가</span>
+      </>
+    ),
+    mediaSrcOne: "/service2/service9-1.png",
+    mediaSrcTwo: "/service2/service9-2.jpeg",
     isVideo: false,
   },
 ];
