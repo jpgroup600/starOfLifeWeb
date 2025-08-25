@@ -4,11 +4,27 @@ import { useScrollTo } from "react-use-window-scroll";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Shape from "./Shape";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 
 const Hero = () => {
+  const text =
+  "마케팅의 성공은 <br/> 시행착오를  얼마나 <br>짧게 줄이는가에 <br/> 달려있습니다 ";
+
+const PcText =
+  "마케팅의 성공은 시행착오를 <br/> 얼마나 짧게 줄이는가에 달려있습니다 ";
+
+const para =
+  "브랜드는 저절로 잘되지 않습니다 \n빈틈없는 전략을 수립해도,\n잘안되는 경우가 흔합니다 ";
+
+  const [isMobile, setIsMobile] = useState(false);
   const container = useRef<HTMLDivElement>(null);
   const scrollTo = useScrollTo();
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 800);
+  }, []);
+
+ 
 
   useGSAP(() => {
     const mm = gsap.matchMedia();
@@ -101,12 +117,11 @@ const Hero = () => {
     },
     { scope: container }
   );
+  
 
-  const text =
-    "아이템과 아이디어는 있으신데 <br/> 함께 실행할 파트너는 없으신가요?";
 
-  const para =
-    "대행사가 아닌 아이디어를 실행할 \n파트너가 되어드리겠습니다";
+
+   
 
     const wrapTextInSpan = (str: string) => {
       return str.split("").map((char, index) => {
@@ -132,7 +147,7 @@ const Hero = () => {
 
       <div className={s.content}>
         <h2 className={`${s.heading} heading`}
-        dangerouslySetInnerHTML={{ __html: text }}
+        dangerouslySetInnerHTML={{ __html: isMobile ? text : PcText }}
         >
         </h2>
         <p className={`${s.para} para`}>{wrapTextInSpan(para)}</p>

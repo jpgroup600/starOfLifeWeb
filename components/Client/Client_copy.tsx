@@ -180,18 +180,10 @@ const Client = () => {
         </div> */}
         <div className={`client-grid-para ${s.grid_para}`}>
           <p ref={para}>
-          마케팅의 활동은 결국 데이터입니다<br />{" "}
-데이터 기반으로 성장 가속화가 가능해집니다  
-            <br />
-            <span className={s.grid_para_space}>의미없는 숫자를 버리고
-            오직 유효한 데이터에 집중합니다</span>
+          우리의 마케팅은 당신의 브랜드를 다시 정의하는 것으로 부터 시작합니다. <br /> 그리고 우리가 가장 잘하는 일들을 당신의 브랜드에 맞춰 재구성합니다  {" "}
           </p>
           <p ref={paraHide} className={s.grid_para_hide}>
-          마케팅의 활동은 결국 데이터입니다<br />{" "}
-          데이터 기반으로 성장 가속화가 가능해집니다  
-            <br />
-            <span className={s.grid_space}>의미없는 숫자를 버리고
-            오직 유효한 데이터에 집중합니다</span>
+          우리의 마케팅은 당신의 브랜드를 다시 정의하는 것으로 부터 시작합니다. <br /> 그리고 우리가 가장 잘하는 일들을 당신의 브랜드에 맞춰 재구성합니다  {" "}
           </p>
         </div>
       </div>

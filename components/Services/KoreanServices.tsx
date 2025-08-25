@@ -93,7 +93,7 @@ const KoreanServices = () => {
         </h2>
         <div className={s.koreansection_relative}>
           {koreanData.map(
-            ({ heading, menu, isVideo, mediaSrcOne, mediaSrcTwo }, i) => {
+            ({ heading, menu, isVideo, mediaSrcOne, mediaSrcTwo = "" }, i) => {
               return (
                 <div
                   style={{ zIndex: i }}
@@ -165,7 +165,7 @@ const KoreanServices = () => {
                             muted
                           />
                         ) : (
-                          <Image
+                          mediaSrcTwo && <Image
                             src={mediaSrcTwo}
                             alt="img"
                             height={1080}
