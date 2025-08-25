@@ -13,7 +13,7 @@ import KoreanServices from "@/components/Services/KoreanServices";
 import Client2 from "@/components/Client/Client_copy"
 
 export default function Home() {
-  useChannelIO("191ac84c-8517-4966-89ce-90152c22369e");
+  // useChannelIO("191ac84c-8517-4966-89ce-90152c22369e");
 
   return (
     <>

@@ -8,7 +8,7 @@ type Data = {
 
 export const data: Data[] = [
   {
-    name: "광고 마케팅",
+    name: "광고 <br/> 마케팅",
     link:"test.html",
     desc: [
       "design product",
