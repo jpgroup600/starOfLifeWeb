@@ -7,7 +7,7 @@ import gsap from "gsap";
 import ContactInput from "./ContactInput";
 import { useSnapshot } from "valtio";
 import { store } from "@/store";
-import {useState} from "react";
+import { useState } from "react";
 
 interface UserLeads {
   companyName: string;
@@ -21,7 +21,7 @@ interface UserLeads {
 const Contact = () => {
   const container = useRef<HTMLDivElement>(null);
   const { workHeadingPointerEnter, workHeadingPointerLeave } =
-  useSnapshot(store);
+    useSnapshot(store);
   const [userLeads, setUserLeads] = useState<UserLeads>({
     companyName: "",
     name: "",
@@ -36,13 +36,13 @@ const Contact = () => {
       body: JSON.stringify(userLeads),
     });
     const data = await response.json();
-    if(data.success) {
+    if (data.success) {
       alert('상담 신청이 완료되었습니다.');
     }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setUserLeads({...userLeads, [e.target.id]: e.target.value});
+    setUserLeads({ ...userLeads, [e.target.id]: e.target.value });
     console.log(userLeads);
   };
 
@@ -105,11 +105,15 @@ const Contact = () => {
   return (
     <section ref={container} id="contact" className={s.main}>
       <div className={`contact-heading ${s.heading}`}>
-      <a href="tel:01089633528" className={s.contact}>
+
         <ContactHeading />
-        <p>연락하기</p>
-      </a>
+
+
+        <div style={{display: "flex", flexDirection: "row", gap: "10%", marginTop: "10%"}}>
+          <a href="tel:01089633528" className={s.contact}><div>Phone : 010-8963-3528</div></a>
+          <div>Location : 강남구 테헤란로 518 9층</div>
         </div>
+      </div>
       {/* <div className={`contact-grid ${s.grid}`}>
         <p>당신의 아이디어를 현실로!</p>
         <h4>
