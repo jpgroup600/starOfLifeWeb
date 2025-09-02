@@ -9,6 +9,8 @@
   cursor: none;
 }
 
+
+
 @font-face {
   font-family: SaolDisplay;
   src: url("/fonts/saolDisplayThin.woff2");
@@ -35,6 +37,69 @@
   // src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMYEONSUNG.woff') format('woff');
   src:url('/fonts/Gowun_Batang/GowunBatang-Bold.ttf');
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SCDream';
+  src: url('/fonts/cream/SCDream1.otf');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SCDream';
+  src: url('/fonts/cream/SCDream2.otf');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SCDream';
+  src: url('/fonts/cream/SCDream3.otf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SCDream';
+  src: url('/fonts/cream/SCDream4.otf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SCDream';
+  src: url('/fonts/cream/SCDream5.otf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SCDream';
+  src: url('/fonts/cream/SCDream6.otf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SCDream';
+  src: url('/fonts/cream/SCDream7.otf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SCDream';
+  src: url('/fonts/cream/SCDream8.otf');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SCDream';
+  src: url('/fonts/cream/SCDream9.otf');
+  font-weight: 900;
   font-style: normal;
 }
 

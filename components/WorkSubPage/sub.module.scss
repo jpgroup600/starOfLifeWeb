@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   &_heading {
-    font-family: Shilla;
+    font-family: cream;
     position: relative;
     text-align: center;
     font-size: 4.7rem;
@@ -95,7 +95,7 @@
     overflow: hidden;
     text-align: center;
     margin-top: 20px;
-    font-family: "Shilla";
+    font-family: "cream";
     font-size: 42px;
     line-height: calc(42px * 1.2);
     @include lg {
