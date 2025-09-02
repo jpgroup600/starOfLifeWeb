@@ -44,7 +44,6 @@
 
 .heading {
   margin-inline: auto;
-
   
   @include lg {
     margin-bottom: 100px;
@@ -55,6 +54,7 @@
       fill: transparent;
       stroke-dasharray: 2340px;
       stroke: black;
+      
     }
   }
 
@@ -203,7 +203,8 @@
     margin-top: 100px;
   }
   h2 {
-    font-family: Shilla; 
+    font-family: "SCDream", sans-serif; 
+    font-weight: 500;
     position: relative;
     z-index: 1;
     // text-transform: uppercase;
